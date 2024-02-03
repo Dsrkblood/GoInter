@@ -1,45 +1,40 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	width: 100%;
+	font-family: "Poppins", sans-serif;
+}
+
 #root {
-	max-width: 1280px;
-	margin: 0 auto;
-	padding: 2rem;
+}
+
+.mobile_header {
+	padding: 20px;
+	background-color: #fff;
+	border-bottom: 1px solid black;
 	text-align: center;
 }
-img {
-	width: 100px;
-	height: 100px;
-}
-.logo {
-	height: 6em;
-	padding: 1.5em;
-	will-change: filter;
-	transition: filter 300ms;
-}
-.logo:hover {
-	filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-	filter: drop-shadow(0 0 2em #61dafbaa);
+
+.mobile_header ul li {
+	list-style: none;
 }
 
-@keyframes logo-spin {
-	from {
-		transform: rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg);
-	}
+.mobile_header ul li a {
+	font-size: 12px;
+	font-weight: 300;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #4c4c4c;
+	line-height: 1.4px;
+	letter-spacing: 0.2em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-	a:nth-of-type(2) .logo {
-		animation: logo-spin infinite 20s linear;
-	}
-}
-
-.card {
-	padding: 2em;
-}
-
-.read-the-docs {
-	color: #888;
+.mobile_header ul li a i {
+	margin-right: 16px;
+	color: #5b83cd;
+	font-size: 14px;
 }
