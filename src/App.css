@@ -7,6 +7,7 @@
 body {
 	width: 100%;
 	font-family: "Poppins", sans-serif;
+	height: 200vh;
 }
 
 #root {
@@ -24,6 +25,7 @@ body {
 }
 
 .mobile_header ul li a {
+	padding: 0px 20px;
 	font-size: 12px;
 	font-weight: 300;
 	text-decoration: none;
@@ -37,4 +39,17 @@ body {
 	margin-right: 16px;
 	color: #5b83cd;
 	font-size: 14px;
+}
+
+nav {
+	position: fixed;
+	width: 100%;
+	font-size: 36px;
+	background-color: transparent;
+}
+
+@media screen and (min-width: 576px) {
+	.mobile_header ul li {
+		display: inline;
+	}
 }
