@@ -14,6 +14,7 @@ body {
 }
 
 .mobile_header {
+	opacity: 0.7;
 	padding: 20px;
 	background-color: #fff;
 	border-bottom: 1px solid black;
@@ -27,7 +28,7 @@ body {
 .mobile_header ul li a {
 	padding: 0px 20px;
 	font-size: 12px;
-	font-weight: 300;
+	font-weight: 400;
 	text-decoration: none;
 	text-transform: uppercase;
 	color: #4c4c4c;
@@ -46,6 +47,64 @@ nav {
 	width: 100%;
 	font-size: 36px;
 	background-color: transparent;
+}
+
+.particles {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	z-index: -1;
+}
+#hero-bg {
+	width: 100%;
+	height: 480px;
+	position: absolute;
+	top: 0;
+	background: linear-gradient(
+		60deg,
+		rgba(30, 94, 155, 1) 0%,
+		rgba(170, 129, 167, 1) 100%
+	);
+	z-index: -1;
+}
+
+.info {
+	display: flex;
+	justify-content: space-between;
+	height: 100%;
+	color: #fff;
+	/* overflow: hidden; */
+}
+
+.info .mott-text {
+	position: relative;
+	overflow: hidden;
+}
+.info .mott-text::before,
+.info .mott-text::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	width: 50%;
+	height: 100%;
+	z-index: 1;
+}
+.info .mott-text::before {
+	left: 0;
+	clip-path: polygon(0 0, 100% 0, 100% 100%);
+}
+.info .mott-text::after {
+	right: 0;
+	clip-path: polygon(0 100%, 100% 0, 0 0);
+}
+
+.info .mott-text span {
+	margin: 20px;
+	font-size: 42px;
+	font-weight: bold;
+	text-transform: uppercase;
+	display: block;
 }
 
 @media screen and (min-width: 576px) {
