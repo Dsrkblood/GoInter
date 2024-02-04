@@ -72,39 +72,46 @@ nav {
 .info {
 	display: flex;
 	justify-content: space-between;
-	height: 100%;
+	height: 320px;
 	color: #fff;
-	/* overflow: hidden; */
 }
 
 .info .mott-text {
+	margin-top: 50px;
+	margin-left: 20px;
 	position: relative;
 	overflow: hidden;
 }
-.info .mott-text::before,
-.info .mott-text::after {
-	content: "";
-	position: absolute;
-	top: 0;
-	width: 50%;
-	height: 100%;
-	z-index: 1;
-}
-.info .mott-text::before {
-	left: 0;
-	clip-path: polygon(0 0, 100% 0, 100% 100%);
-}
-.info .mott-text::after {
-	right: 0;
-	clip-path: polygon(0 100%, 100% 0, 0 0);
-}
 
-.info .mott-text span {
-	margin: 20px;
-	font-size: 42px;
+.info .mott-text p {
+	line-height: 1.15;
+	font-size: 48px;
 	font-weight: bold;
 	text-transform: uppercase;
 	display: block;
+	letter-spacing: -2px;
+}
+
+.info .social {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
+.info .social .social-heading {
+	font-weight: bold;
+	letter-spacing: 3px;
+	rotate: 90deg;
+}
+.info .social .social-icons{
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+}
+.info .social .social-icons a {
+	text-align: center;
+	margin: 10px 0;
+	color: #FFF;
 }
 
 @media screen and (min-width: 576px) {

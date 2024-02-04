@@ -13,22 +13,24 @@ function App() {
 
 			<div className='info'>
 				<div className='mott-text'>
-					<span>internet</span>
-					<span>na</span>
-					<span>każdą</span>
-					<span>kieszeń</span>
+					<p>internet</p>
+					<p>na</p>
+					<p>każdą</p>
+					<p>kieszeń</p>
 				</div>
 				<div className='social'>
-					<span>media</span>
-					<a href='#'>
-						<i className='fa-brands fa-facebook-f'></i>
-					</a>
-					<a href='#'>
-						<i className='fa-brands fa-linkedin-in'></i>
-					</a>
-					<a href='#'>
-						<i className='fa-brands fa-x-twitter'></i>
-					</a>
+					<p className='social-heading'>media</p>
+					<div className='social-icons'>
+						<a href='#'>
+							<i className='fa-brands fa-facebook-f'></i>
+						</a>
+						<a href='#'>
+							<i className='fa-brands fa-linkedin-in'></i>
+						</a>
+						<a href='#'>
+							<i className='fa-brands fa-x-twitter'></i>
+						</a>
+					</div>
 				</div>
 			</div>
 		</>
