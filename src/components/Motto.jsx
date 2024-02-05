@@ -1,20 +1,25 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 
 export default function Motto() {
 	const [text, setText] = useState(true);
 
+	const handleText = useCallback(function handleText(boolen) {
+		setText(prevText => boolen);
+	}, []);
+
 	useEffect(() => {
+		console.log("restert");
 		const timer = setInterval(() => {
 			setText(prevText => !prevText);
-		}, 10000);
+		}, 5000);
 		return () => clearInterval(timer);
-	}, []);
+	}, [handleText]);
 	return (
 		<div className='info'>
 			<div className='top'>
 				<div className='mott-text' key={text ? "internet" : "telewizja"}>
 					{text ? (
-						<h1 className={text && "animation"}>
+						<h1 className={text && "active"}>
 							internet
 							<br />
 							na
@@ -24,7 +29,7 @@ export default function Motto() {
 							kieszeń
 						</h1>
 					) : (
-						<h1 className={!text && "animation"}>
+						<h1 className={!text && "active"}>
 							telewizja
 							<br />
 							dla
@@ -51,8 +56,16 @@ export default function Motto() {
 				</div>
 			</div>
 			<div className='bottom'>
-				<p className={text && "first"}>01</p>
-				<p className={!text && "first"}>02</p>
+				<button
+					onClick={() => handleText(true)}
+					className={text ? "active" : null}>
+					01
+				</button>
+				<button
+					onClick={() => handleText(false)}
+					className={text ? null : "active"}>
+					02
+				</button>
 			</div>
 		</div>
 	);

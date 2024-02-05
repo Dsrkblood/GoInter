@@ -113,7 +113,7 @@ body {
 	letter-spacing: -2px;
 }
 
-.info .top .mott-text .animation {
+.info .top .mott-text .active {
 	animation: fadein 2s ease-in;
 }
 
@@ -162,13 +162,22 @@ body {
 	justify-content: center;
 }
 
-.info .bottom p {
+.info .bottom button {
 	margin: 0 5px;
+	padding: 5px;
+	background: none;
+	border: none;
+	color: #fff;
 	transition: text-decoration 3s;
+	cursor: pointer;
 }
 
-.info .bottom .first {
+.info .bottom .active {
 	text-decoration: overline;
+}
+
+.modal {
+	background-color: #fff;
 }
 
 @media screen and (min-width: 576px) {
