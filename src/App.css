@@ -41,10 +41,11 @@ body {
 
 #nav {
 	position: sticky;
-	top: 0;
-	margin: 0 20px;
 	display: flex;
 	justify-content: space-between;
+	top: 0;
+	margin: 0 20px;
+	z-index: 1;
 }
 #nav .company_name,
 #nav .menu {
