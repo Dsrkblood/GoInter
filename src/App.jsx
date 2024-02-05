@@ -1,15 +1,15 @@
 import "./App.css";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/navComponents/Navbar";
 import ParticlesAnimation from "./components/ParticlesAnimation";
-import Motto from "./components/Motto";
+import InternetPromo from "./components/info/InternetPromo";
 
 function App() {
 	return (
 		<>
-			<Navbar />
 			<ParticlesAnimation />
-
-			<Motto />
+			<Navbar />
+			<InternetPromo />
+			<div id='motto'>Głupotki</div>
 		</>
 	);
 }

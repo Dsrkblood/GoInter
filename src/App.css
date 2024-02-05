@@ -4,6 +4,18 @@
 	padding: 0;
 }
 
+:root {
+	scroll-behavior: smooth;
+	--primary-color: #fff;
+	--header-color: #4c4c4c;
+	--background-color: ;
+	--particle-gradient-color: linear-gradient(
+		60deg,
+		rgba(30, 94, 155, 1) 0%,
+		rgba(170, 129, 167, 1) 100%
+	);
+}
+
 body {
 	position: relative;
 	width: 100%;
@@ -29,7 +41,7 @@ body {
 	font-weight: 500;
 	text-decoration: none;
 	text-transform: uppercase;
-	color: #4c4c4c;
+	color: var(--header-color);
 	letter-spacing: 0.2em;
 }
 
@@ -44,9 +56,16 @@ body {
 	display: flex;
 	justify-content: space-between;
 	top: 0;
-	margin: 0 20px;
+	padding: 0 20px;
+	width: 100%;
 	z-index: 1;
+	transition: background-color 0.5s ease-in-out;
 }
+
+#nav.active {
+	background-color: #f8f5f8;
+}
+
 #nav .company_name,
 #nav .menu {
 	font-size: 36px;
@@ -68,10 +87,15 @@ body {
 }
 
 #nav .menu {
-	color: #fff;
+	color: var(--primary-color);
 	background: none;
 	border: none;
+	transition: color 1s;
 	cursor: pointer;
+}
+
+#nav.active .menu {
+	color: #38235e;
 }
 
 .particles {
@@ -84,17 +108,13 @@ body {
 #hero-bg {
 	position: absolute;
 	width: 100%;
-	height: 480px;
+	height: 450px;
 	top: 0;
-	background: linear-gradient(
-		60deg,
-		rgba(30, 94, 155, 1) 0%,
-		rgba(170, 129, 167, 1) 100%
-	);
+	background: var(--particle-gradient-color);
 	z-index: -2;
 }
 .info {
-	color: #fff;
+	color: var(--primary-color);
 }
 .info .top {
 	display: flex;
@@ -107,14 +127,13 @@ body {
 
 .info .top .mott-text h1 {
 	position: relative;
-	display: block;
 	font-size: 48px;
 	font-weight: 800;
 	text-transform: uppercase;
 	line-height: 1.15;
 	letter-spacing: -2px;
 }
-.info .top .mott-text h1 h6 {
+.info .top .mott-text h1 .small-text {
 	position: absolute;
 	right: 0;
 	top: 45px;
@@ -147,7 +166,7 @@ body {
 	text-align: center;
 	margin-top: 10px;
 	padding: 5px;
-	color: #fff;
+	color: var(--primary-color);
 }
 .info .social .social-icons a .fa-facebook-f,
 .info .social .social-icons a .fa-linkedin-in,
@@ -155,10 +174,7 @@ body {
 	transition: color 0.3s;
 }
 
-.info .social .social-icons a .fa-facebook-f:hover {
-	color: #0866ff;
-}
-
+.info .social .social-icons a .fa-facebook-f:hover,
 .info .social .social-icons a .fa-linkedin-in:hover {
 	color: #0866ff;
 }
@@ -177,17 +193,38 @@ body {
 	padding: 5px;
 	background: none;
 	border: none;
-	color: #fff;
+	color: var(--primary-color);
 	transition: text-decoration 3s;
 	cursor: pointer;
 }
 
-.info .bottom .active {
+.info .bottom button.active {
 	text-decoration: overline;
 }
 
+.info .arrow {
+	position: relative;
+	height: 60px;
+	width: 100%;
+}
+
+.info .arrow a i {
+	position: absolute;
+	margin-top: 10px;
+	padding: 10px;
+	left: 50%;
+	font-size: 24px;
+	color: var(--primary-color);
+	transform: translateX(-50%);
+	cursor: pointer;
+}
+
+.info .arrow a i:hover {
+	animation: arrowMove 0.5s ease-in-out 1;
+}
+
 .modal {
-	background-color: #fff;
+	background-color: var(--primary-color);
 }
 
 @media screen and (min-width: 576px) {
@@ -200,19 +237,19 @@ body {
 	0% {
 		opacity: 0;
 	}
-	20% {
-		opacity: 0.2;
-	}
-	40% {
-		opacity: 0.4;
-	}
-	60% {
-		opacity: 0.6;
-	}
-	80% {
-		opacity: 0.8;
-	}
 	100% {
 		opacity: 1;
+	}
+}
+@keyframes arrowMove {
+	0% {
+		top: 0px;
+	}
+	50% {
+		top: 5px;
+	}
+
+	100% {
+		top: 0px;
 	}
 }

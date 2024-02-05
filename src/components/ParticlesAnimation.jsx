@@ -40,7 +40,7 @@ export default function ParticlesAnimation() {
 						},
 						modes: {
 							push: {
-								quantity: 2,
+								quantity: 1,
 							},
 							repulse: {
 								distance: 100,
