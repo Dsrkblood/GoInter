@@ -6,10 +6,9 @@ import Motto from "./components/Motto";
 function App() {
 	return (
 		<>
-			<div id='hero-bg'>
-				<ParticlesAnimation />
-			</div>
 			<Navbar />
+			<ParticlesAnimation />
+
 			<Motto />
 		</>
 	);

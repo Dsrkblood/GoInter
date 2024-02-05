@@ -5,19 +5,18 @@
 }
 
 body {
+	position: relative;
 	width: 100%;
 	font-family: "Poppins", sans-serif;
-	height: 300vh;
 }
 
 #root {
-	
+	height: 300vh;
 }
 
 .mobile_header {
 	padding: 20px;
 	background-color: rgba(255, 255, 255, 0.8);
-	border-bottom: 1px solid black;
 	text-align: center;
 }
 
@@ -26,91 +25,117 @@ body {
 }
 
 .mobile_header ul li a {
-	padding: 0px 20px;
 	font-size: 12px;
-	font-weight: 400;
+	font-weight: 500;
 	text-decoration: none;
 	text-transform: uppercase;
 	color: #4c4c4c;
-	line-height: 1.4px;
 	letter-spacing: 0.2em;
 }
 
 .mobile_header ul li a i {
-	margin-right: 16px;
+	margin-right: 10px;
 	color: #5b83cd;
 	font-size: 14px;
 }
 
-nav {
+#nav {
 	position: sticky;
 	top: 0;
-	width: 100%;
+	margin: 0 20px;
+	display: flex;
+	justify-content: space-between;
+}
+#nav .company_name,
+#nav .menu {
 	font-size: 36px;
-	background-color: transparent;
+	padding: 0 5px;
+}
+#nav .company_name {
+	font-weight: 800;
+	font-style: italic;
+	letter-spacing: -2px;
+	text-transform: uppercase;
+	background: linear-gradient(
+		60deg,
+		rgba(183, 41, 126, 1) 0%,
+		rgba(43, 35, 91, 1) 100%
+	);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+#nav .menu {
+	color: #fff;
+	background: none;
+	border: none;
+	cursor: pointer;
 }
 
 .particles {
-	height: 100%;
-	width: 100%;
 	position: absolute;
 	top: 0;
+	height: 100%;
+	width: 100%;
 	z-index: -1;
 }
 #hero-bg {
+	position: absolute;
 	width: 100%;
 	height: 480px;
-	position: absolute;
 	top: 0;
 	background: linear-gradient(
 		60deg,
 		rgba(30, 94, 155, 1) 0%,
 		rgba(170, 129, 167, 1) 100%
 	);
-	z-index: -1;
+	z-index: -2;
 }
-
 .info {
-	display: flex;
-	justify-content: space-between;
-	height: 320px;
 	color: #fff;
 }
-
-.info .mott-text {
-	margin-top: 50px;
-	margin-left: 20px;
-	overflow: hidden;
+.info .top {
+	display: flex;
+	justify-content: space-between;
 }
 
-.info .mott-text p {
-	line-height: 1.15;
-	font-size: 48px;
-	font-weight: bold;
-	text-transform: uppercase;
+.info .top .mott-text {
+	margin-left: 20px;
+}
+
+.info .top .mott-text h1 {
 	display: block;
+	font-size: 48px;
+	font-weight: 800;
+	text-transform: uppercase;
+	line-height: 1.15;
 	letter-spacing: -2px;
 }
 
-.info .social {
+.info .top .mott-text .animation {
+	animation: fadein 2s ease-in;
+}
+
+.info .top .social {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 }
 
-.info .social .social-heading {
+.info .top .social .social-heading {
 	font-weight: bold;
 	letter-spacing: 3px;
 	rotate: 90deg;
-	margin-top: 80px;
+	margin-top: 30px;
 }
-.info .social .social-icons {
+.info .top .social .social-icons {
 	display: flex;
 	flex-direction: column;
 }
-.info .social .social-icons a {
+.info .top .social .social-icons a {
 	text-align: center;
-	margin: 2px 0;
+	margin-top: 10px;
 	padding: 5px;
 	color: #fff;
 }
@@ -132,8 +157,43 @@ nav {
 	color: #0f1419;
 }
 
+.info .bottom {
+	display: flex;
+	justify-content: center;
+}
+
+.info .bottom p {
+	margin: 0 5px;
+	transition: text-decoration 3s;
+}
+
+.info .bottom .first {
+	text-decoration: overline;
+}
+
 @media screen and (min-width: 576px) {
 	.mobile_header ul li {
 		display: inline;
+	}
+}
+
+@keyframes fadein {
+	0% {
+		opacity: 0;
+	}
+	20% {
+		opacity: 0.2;
+	}
+	40% {
+		opacity: 0.4;
+	}
+	60% {
+		opacity: 0.6;
+	}
+	80% {
+		opacity: 0.8;
+	}
+	100% {
+		opacity: 1;
 	}
 }
