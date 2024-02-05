@@ -105,12 +105,21 @@ body {
 }
 
 .info .top .mott-text h1 {
+	position: relative;
 	display: block;
 	font-size: 48px;
 	font-weight: 800;
 	text-transform: uppercase;
 	line-height: 1.15;
 	letter-spacing: -2px;
+}
+.info .top .mott-text h1 h6 {
+	position: absolute;
+	right: 0;
+	top: 45px;
+	font-size: 10px;
+	font-weight: 300;
+	letter-spacing: normal;
 }
 
 .info .top .mott-text .active {

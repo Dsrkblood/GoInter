@@ -11,7 +11,7 @@ export default function Motto() {
 		console.log("restert");
 		const timer = setInterval(() => {
 			setText(prevText => !prevText);
-		}, 5000);
+		}, 10000);
 		return () => clearInterval(timer);
 	}, [handleText]);
 	return (
@@ -27,6 +27,10 @@ export default function Motto() {
 							każdą
 							<br />
 							kieszeń
+							<h6>
+								najlepszy dostawca
+								<br /> w twojej okolicy
+							</h6>
 						</h1>
 					) : (
 						<h1 className={!text && "active"}>
@@ -37,6 +41,10 @@ export default function Motto() {
 							całej
 							<br />
 							rodziny
+							<h6>
+								bogata oferta
+								<br /> kanałów tematycznych
+							</h6>
 						</h1>
 					)}
 				</div>
