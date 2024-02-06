@@ -11,8 +11,8 @@
 	--background-color: ;
 	--particle-gradient-color: linear-gradient(
 		60deg,
-		rgba(30, 94, 155, 1) 0%,
-		rgba(170, 129, 167, 1) 100%
+		rgba(30, 94, 155, 1) 15%,
+		rgba(102, 36, 97, 1) 90%
 	);
 }
 
@@ -26,28 +26,49 @@ body {
 	height: 300vh;
 }
 
-.mobile_header {
+header {
 	padding: 20px;
 	background-color: rgba(255, 255, 255, 0.8);
 	text-align: center;
 }
 
-.mobile_header ul li {
+header .desktop-header {
+	display: none;
+}
+
+header .mobile-header ul li,
+header .desktop-header ul li {
 	list-style: none;
 }
 
-.mobile_header ul li a {
+header .mobile-header ul li a,
+header .desktop-header ul li a {
 	font-size: 12px;
 	font-weight: 500;
 	text-decoration: none;
 	text-transform: uppercase;
 	color: var(--header-color);
 	letter-spacing: 0.2em;
+	transition: color 0.3s;
 }
 
-.mobile_header ul li a i {
+header .mobile-header ul li a:hover {
+	color: #5b83cd;
+}
+
+header .desktop-header ul li a:hover {
+	color: #c280bf;
+}
+
+header .mobile-header ul li a i {
 	margin-right: 10px;
 	color: #5b83cd;
+	font-size: 14px;
+}
+
+header .desktop-header ul li a i {
+	margin-right: 10px;
+	color: #c280bf;
 	font-size: 14px;
 }
 
@@ -98,42 +119,38 @@ body {
 	color: #38235e;
 }
 
-.particles {
+#particles {
 	position: absolute;
 	top: 0;
-	height: 100%;
 	width: 100%;
+	min-height: 450px;
+	background: var(--particle-gradient-color);
 	z-index: -1;
 }
-#hero-bg {
-	position: absolute;
-	width: 100%;
-	height: 450px;
-	top: 0;
-	background: var(--particle-gradient-color);
-	z-index: -2;
-}
-.info {
+
+.container {
+	margin-bottom: 50px;
+	height: auto;
 	color: var(--primary-color);
 }
-.info .top {
+.container .top {
 	display: flex;
 	justify-content: space-between;
 }
 
-.info .top .mott-text {
+.container .top .promo-text {
 	margin-left: 20px;
 }
 
-.info .top .mott-text h1 {
+.container .top .promo-text h1 {
 	position: relative;
 	font-size: 48px;
 	font-weight: 800;
 	text-transform: uppercase;
 	line-height: 1.15;
-	letter-spacing: -2px;
+	letter-spacing: -2.5px;
 }
-.info .top .mott-text h1 .small-text {
+.container .top .promo-text h1 .small-text {
 	position: absolute;
 	right: 0;
 	top: 45px;
@@ -142,53 +159,53 @@ body {
 	letter-spacing: normal;
 }
 
-.info .top .mott-text .active {
-	animation: fadein 2s ease-in;
+.container .top .promo-text .active {
+	animation: fadein 1s ease-in;
 }
 
-.info .top .social {
+.container .top .social {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 }
 
-.info .top .social .social-heading {
+.container .top .social .social-heading {
 	font-weight: bold;
 	letter-spacing: 3px;
 	rotate: 90deg;
 	margin-top: 30px;
 }
-.info .top .social .social-icons {
+.container .top .social .social-icons {
 	display: flex;
 	flex-direction: column;
 }
-.info .top .social .social-icons a {
+.container .top .social .social-icons a {
 	text-align: center;
 	margin-top: 10px;
 	padding: 5px;
 	color: var(--primary-color);
 }
-.info .social .social-icons a .fa-facebook-f,
-.info .social .social-icons a .fa-linkedin-in,
-.info .social .social-icons a .fa-x-twitter {
+.container .social .social-icons a .fa-facebook-f,
+.container .social .social-icons a .fa-linkedin-in,
+.container .social .social-icons a .fa-x-twitter {
 	transition: color 0.3s;
 }
 
-.info .social .social-icons a .fa-facebook-f:hover,
-.info .social .social-icons a .fa-linkedin-in:hover {
+.container .social .social-icons a .fa-facebook-f:hover,
+.container .social .social-icons a .fa-linkedin-in:hover {
 	color: #0866ff;
 }
 
-.info .social .social-icons a .fa-x-twitter:hover {
+.container .social .social-icons a .fa-x-twitter:hover {
 	color: #0f1419;
 }
 
-.info .bottom {
+.container .bottom {
 	display: flex;
 	justify-content: center;
 }
 
-.info .bottom button {
+.container .bottom button {
 	margin: 0 5px;
 	padding: 5px;
 	background: none;
@@ -198,29 +215,8 @@ body {
 	cursor: pointer;
 }
 
-.info .bottom button.active {
+.container .bottom button.active {
 	text-decoration: overline;
-}
-
-.info .arrow {
-	position: relative;
-	height: 60px;
-	width: 100%;
-}
-
-.info .arrow a i {
-	position: absolute;
-	margin-top: 10px;
-	padding: 10px;
-	left: 50%;
-	font-size: 24px;
-	color: var(--primary-color);
-	transform: translateX(-50%);
-	cursor: pointer;
-}
-
-.info .arrow a i:hover {
-	animation: arrowMove 0.5s ease-in-out 1;
 }
 
 .modal {
@@ -228,8 +224,93 @@ body {
 }
 
 @media screen and (min-width: 576px) {
-	.mobile_header ul li {
+	.mobile-header ul li {
 		display: inline;
+		margin: auto 20px;
+	}
+	.container {
+		margin: 0 auto 50px;
+		width: 85%;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	header {
+		display: flex;
+		justify-content: space-between;
+	}
+	header .mobile-header ul li {
+		text-align: left;
+		display: block;
+	}
+	header .desktop-header {
+		display: flex;
+		align-items: center;
+	}
+	header .desktop-header ul li {
+		margin-left: 40px;
+		display: inline;
+	}
+	#particles {
+		height: 480px;
+	}
+	.container {
+		/* height: 300px; */
+		width: 90%;
+	}
+	.container .top .promo-text h1 {
+		font-size: 58px;
+		line-height: 1.05;
+	}
+	.container .top .promo-text h1 .small-text {
+		top: 50px;
+		font-size: 16px;
+	}
+	.container .top .social {
+		font-size: 20px;
+	}
+}
+@media screen and (min-width: 992px) {
+	header {
+		padding: 20px 50px;
+	}
+	header .mobile-header ul li {
+		display: inline;
+	}
+	header .mobile-header ul li a i,
+	header .desktop-header ul li a i {
+		font-size: 20px;
+	}
+	#nav {
+		padding: 0 50px;
+	}
+	#particles {
+		height: 700px;
+	}
+	.container {
+		display: flex;
+		/* height: auto; */
+		width: 70%;
+	}
+	.container .top {
+		width: 100%;
+		order: 2;
+	}
+	.container .bottom {
+		flex-direction: column;
+		order: 1;
+	}
+	.container .bottom button {
+		font-size: 20px;
+		margin: 10px;
+	}
+	.container .top .promo-text h1 {
+		font-size: 120px;
+		letter-spacing: -6px;
+	}
+	.container .top .promo-text h1 .small-text {
+		top: 110px;
+		font-size: 30px;
 	}
 }
 

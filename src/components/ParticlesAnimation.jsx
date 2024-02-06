@@ -6,89 +6,87 @@ export default function ParticlesAnimation() {
 		await loadSlim(engine);
 	}, []);
 	return (
-		<div id='hero-bg'>
-			<Particles
-				className='particles'
-				options={{
-					fullScreen: {
-						enable: false,
-					},
-					fpsLimit: 120,
-					interactivity: {
-						events: {
-							onClick: {
-								enable: true,
-								mode: "push",
-							},
-							onDiv: {
-								enable: false,
-								type: "circle",
-							},
-							onHover: {
-								enable: true,
-								mode: "slow",
-								parallax: {
-									enable: false,
-									force: 60,
-									smooth: 10,
-								},
-							},
-							resize: {
-								delay: 0.5,
-								enable: true,
-							},
-						},
-						modes: {
-							push: {
-								quantity: 1,
-							},
-							repulse: {
-								distance: 100,
-								duration: 0.4,
-							},
-						},
-					},
-					particles: {
-						color: {
-							value: "#fff",
-						},
-						links: {
-							color: "#fff",
-							distance: 150,
+		<Particles
+			id='particles'
+			options={{
+				fullScreen: {
+					enable: false,
+				},
+				fpsLimit: 120,
+				interactivity: {
+					events: {
+						onClick: {
 							enable: true,
-							opacity: 0.5,
-							width: 1,
+							mode: "push",
 						},
-						move: {
-							direction: "none",
-							enable: true,
-							outModes: {
-								default: "out",
-							},
-							random: false,
-							speed: 10,
-							straight: false,
-						},
-						number: {
-							density: {
-								enable: true,
-							},
-							value: 100,
-						},
-						opacity: {
-							value: 0.5,
-						},
-						shape: {
+						onDiv: {
+							enable: false,
 							type: "circle",
 						},
-						size: {
-							value: { min: 1, max: 5 },
+						onHover: {
+							enable: true,
+							mode: "slow",
+							parallax: {
+								enable: false,
+								force: 60,
+								smooth: 10,
+							},
+						},
+						resize: {
+							delay: 0.5,
+							enable: true,
 						},
 					},
-					detectRetina: true,
-				}}
-				init={init}
-			/>
-		</div>
+					modes: {
+						push: {
+							quantity: 1,
+						},
+						repulse: {
+							distance: 100,
+							duration: 0.4,
+						},
+					},
+				},
+				particles: {
+					color: {
+						value: "#fff",
+					},
+					links: {
+						color: "#fff",
+						distance: 150,
+						enable: true,
+						opacity: 0.5,
+						width: 1,
+					},
+					move: {
+						direction: "none",
+						enable: true,
+						outModes: {
+							default: "out",
+						},
+						random: false,
+						speed: 10,
+						straight: false,
+					},
+					number: {
+						density: {
+							enable: true,
+						},
+						value: 100,
+					},
+					opacity: {
+						value: 0.5,
+					},
+					shape: {
+						type: "circle",
+					},
+					size: {
+						value: { min: 1, max: 5 },
+					},
+				},
+				detectRetina: true,
+			}}
+			init={init}
+		/>
 	);
 }

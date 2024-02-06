@@ -18,9 +18,9 @@ export default function InternetPromo() {
 	}, [handleActive]);
 
 	return (
-		<div className='info'>
+		<div className='container'>
 			<div className='top'>
-				<div className='mott-text' key={active ? "Internet" : "TV"}>
+				<div className='promo-text' key={active ? "Internet" : "TV"}>
 					<ActivePromo
 						active={active}
 						content={["internet", "na", "każdą", "kieszeń"]}
