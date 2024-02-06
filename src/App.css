@@ -123,7 +123,7 @@ header .desktop-header ul li a i {
 	position: absolute;
 	top: 0;
 	width: 100%;
-	min-height: 450px;
+	height: 450px;
 	background: var(--particle-gradient-color);
 	z-index: -1;
 }
