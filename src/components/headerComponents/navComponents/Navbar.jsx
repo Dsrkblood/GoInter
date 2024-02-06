@@ -1,8 +1,10 @@
 import { useRef, useEffect, useState } from "react";
-import Menu from "./Menu";
+
+import MenuModal from "./MenuModal";
 
 export default function Navbar() {
 	const [isNavScrolled, setIsNavScrolled] = useState(false);
+	const [isOpen, setIsOpen] = useState(false);
 
 	useEffect(() => {
 		const handleScroll = () => {
@@ -16,17 +18,17 @@ export default function Navbar() {
 		};
 	}, []);
 
-	const modal = useRef();
 
-	function handleOpenMenu() {
-		modal.current.open();
+
+	function handleOpen() {
+		setIsOpen(prevOpen => !prevOpen);
 	}
 
 	return (
 		<nav id='nav' className={isNavScrolled ? "active" : null}>
 			<p className='company_name'>gointer</p>
 			<div className='mobile'>
-				<button onClick={handleOpenMenu} className='menu'>
+				<button onClick={handleOpen} className='menu'>
 					<i className='fa-solid fa-bars'></i>
 				</button>
 			</div>
@@ -38,7 +40,7 @@ export default function Navbar() {
 				<a href='#'>monitoring</a>
 				<i className='fa-solid fa-ellipsis'></i>
 			</div>
-			<Menu ref={modal} buttonCaption='Close' />
+			<MenuModal open={isOpen} onClick={handleOpen} />
 		</nav>
 	);
 }

@@ -91,8 +91,8 @@ header .desktop-header ul li a i {
 #nav .company_name,
 #nav .menu {
 	font-size: 36px;
-	padding: 0 5px;
 }
+
 #nav .company_name {
 	font-weight: 800;
 	font-style: italic;
@@ -238,8 +238,64 @@ header .desktop-header ul li a i {
 	text-decoration: overline;
 }
 
-.modal {
+.menu-modal {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
 	background-color: var(--primary-color);
+}
+.menu-modal {
+	display: flex;
+	flex-direction: column;
+	animation: fadein 0.3s 1 ease-in;
+	height: 100vh;
+}
+
+.menu-modal button {
+	font-size: 48px;
+	padding: 0 18px;
+	text-align: right;
+	border: none;
+	background: none;
+}
+
+.menu-modal button i {
+	color: #38235e;
+}
+
+.menu-modal .links a {
+	display: block;
+	margin: 20px;
+	color: var(--header-color);
+	text-transform: uppercase;
+	text-align: center;
+	text-decoration: none;
+	letter-spacing: 2px;
+}
+
+#content {
+	margin-top: 100px;
+	text-align: center;
+	color: var(--header-color);
+}
+
+#content h3 {
+	font-weight: 300;
+	font-size: 18px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+#content h2 {
+	text-transform: uppercase;
+	font-size: 32px;
+	letter-spacing: 1.5px;
+	word-wrap: break-word;
+}
+
+#content p {
+	font-size: 14px;
 }
 
 @media screen and (min-width: 576px) {
@@ -274,7 +330,6 @@ header .desktop-header ul li a i {
 		height: 480px;
 	}
 	.container {
-		/* height: 300px; */
 		width: 90%;
 	}
 	.container .top .promo-text h1 {
@@ -315,7 +370,6 @@ header .desktop-header ul li a i {
 	}
 	.container {
 		display: flex;
-		/* height: auto; */
 		width: 70%;
 	}
 	.container .top {
@@ -348,6 +402,7 @@ header .desktop-header ul li a i {
 		opacity: 1;
 	}
 }
+
 @keyframes arrowMove {
 	0% {
 		top: 0px;
