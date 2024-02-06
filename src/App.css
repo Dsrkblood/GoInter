@@ -81,7 +81,7 @@ header .desktop-header ul li a i {
 	padding: 0 20px;
 	width: 100%;
 	z-index: 1;
-	transition: background-color 0.5s ease-in-out;
+	transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
 }
 
 #nav.active {
@@ -132,7 +132,9 @@ header .desktop-header ul li a i {
 	cursor: pointer;
 }
 
-#nav.active .menu {
+#nav.active .mobile .menu,
+#nav.active .desktop a,
+#nav.active .desktop i {
 	color: #38235e;
 }
 
