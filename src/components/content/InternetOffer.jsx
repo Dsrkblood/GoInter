@@ -8,7 +8,9 @@ export default function InternetOffer({
 	return (
 		<div className='offer'>
 			<div className='header-offer'>
-				<h3>internet {title} mb/s</h3>
+				<h3>
+					internet <span>{title} mb/s</span>
+				</h3>
 			</div>
 			<div className='plan'>
 				<div className='speed'>
@@ -44,9 +46,8 @@ export default function InternetOffer({
 				<span className='big'>{price}</span>
 				<span className='small'>/ms-c</span>
 			</div>
-			<button>
-				<a href='#'>zamów</a>
-			</button>
+
+			<a href='#'>zamów</a>
 		</div>
 	);
 }

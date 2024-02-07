@@ -338,30 +338,40 @@ header .desktop-header ul li a i {
 .internet-offers .offer {
 	margin: 40px auto;
 	position: relative;
-	width: 80%;
+	min-width: 300px;
+	width: 90%;
 	border-radius: 10px 10px 0 0;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	transition: scale 0.4s ease-in-out;
+	background-color: #fff;
+}
+
+.internet-offers .offer:hover {
+	scale: 1.15;
 }
 .internet-offers .offer .header-offer {
 	border-radius: 10px 10px 0 0;
-	background: var(--particle-gradient-color);
+
+	background: linear-gradient(
+		60deg,
+		rgba(33, 132, 147, 1) 0%,
+		rgba(49, 105, 160, 1) 100%
+	);
 }
 .internet-offers .offer:nth-child(2) .header-offer {
 	background: linear-gradient(
 		60deg,
-		rgba(50, 104, 158, 1) 0%,
-		rgba(49, 151, 212, 1) 100%
+		rgba(49, 106, 160, 1) 0%,
+		rgba(93, 131, 205, 1) 100%
 	);
 }
 .internet-offers .offer:nth-child(3) .header-offer {
-	background: linear-gradient(
-		60deg,
-		rgba(33, 131, 146, 1) 0%,
-		rgba(50, 183, 193, 1) 100%
-	);
+	background: var(--particle-gradient-color);
 }
 
 .internet-offers .offer .header-offer h3 {
+	display: flex;
+	flex-direction: column;
 	padding: 10px 30px;
 	font-size: 24px;
 	text-transform: uppercase;
@@ -436,23 +446,26 @@ header .desktop-header ul li a i {
 	-webkit-text-fill-color: transparent;
 }
 
-.internet-offers .offer button {
+.internet-offers .offer a {
 	position: absolute;
 	bottom: -30px;
 	left: 50%;
 	width: 180px;
-	background: var(--particle-gradient-color);
 	border: none;
 	border-radius: 20px;
+	font-size: 12px;
+	text-transform: uppercase;
+	text-decoration: none;
 	transform: translateX(-50%);
+	letter-spacing: 2px;
+	line-height: 5;
+	color: var(--primary-color);
+	background: var(--particle-gradient-color);
+	transition: color 0.3s ease-in-out;
 }
 
-.internet-offers .offer button a {
-	line-height: 5;
-	text-transform: uppercase;
-	font-size: 12px;
-	color: var(--primary-color);
-	text-decoration: none;
+.internet-offers .offer a:hover {
+	color: var(--header-color);
 }
 @media screen and (min-width: 576px) {
 	.mobile-header ul li {
@@ -479,6 +492,9 @@ header .desktop-header ul li a i {
 
 	#content .content-header p {
 		font-size: 20px;
+	}
+	.internet-offers .offer {
+		width: 400px;
 	}
 }
 
@@ -521,6 +537,9 @@ header .desktop-header ul li a i {
 	}
 	#content .slider-arrow {
 		top: -75px;
+	}
+	.internet-offers .offer {
+		width: 450px;
 	}
 }
 @media screen and (min-width: 992px) {
@@ -578,11 +597,14 @@ header .desktop-header ul li a i {
 		top: -90px;
 	}
 	.internet-offers {
+		padding: 0 2%;
 		flex-direction: row;
+		justify-content: space-around;
 	}
 	.internet-offers .offer {
-		/* margin: 30px 60px; */
-		width: auto;
+		min-width: 300px;
+		max-width: 400px;
+		margin: 0 10px;
 	}
 }
 
