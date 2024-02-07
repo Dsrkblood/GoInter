@@ -11,8 +11,8 @@
 	--background-color: ;
 	--particle-gradient-color: linear-gradient(
 		60deg,
-		rgba(30, 94, 155, 1) 15%,
-		rgba(102, 36, 97, 1) 90%
+		rgba(93, 131, 205, 1) 15%,
+		rgba(193, 128, 191, 1) 90%
 	);
 }
 
@@ -101,7 +101,8 @@ header .desktop-header ul li a i {
 	text-transform: uppercase;
 	background: linear-gradient(
 		60deg,
-		rgba(183, 41, 126, 1) 0%,
+		rgba(183, 42, 126, 1) 0%,
+		rgba(136, 43, 117, 1) 69%,
 		rgba(43, 35, 91, 1) 100%
 	);
 	background-clip: text;
@@ -331,10 +332,12 @@ header .desktop-header ul li a i {
 
 .internet-offers {
 	display: flex;
-	justify-content: center;
-	margin-top: 40px;
+	flex-direction: column;
+	align-items: center;
+	/* margin-top: 20px; */
 }
 .internet-offers .offer {
+	margin: 40px auto;
 	position: relative;
 	width: 80%;
 	border-radius: 10px 10px 0 0;
@@ -370,14 +373,13 @@ header .desktop-header ul li a i {
 .internet-offers .offer .plan .download {
 	color: #5b83cd;
 }
-.internet-offers .offer .plan .uppload {
+.internet-offers .offer .plan .upload {
 	color: #c280bf;
 }
 .internet-offers .offer .plan .plan-icon {
 	margin-left: 20px;
 	width: 140px;
 	height: 140px;
-	background: url(./assets/price-icon01.png);
 }
 .internet-offers .offer .plan-features ul {
 	width: 80%;
@@ -394,7 +396,7 @@ header .desktop-header ul li a i {
 	border-top: 2px solid rgba(0, 0, 0, 0.15);
 }
 .internet-offers .offer .plan-price {
-	margin: 20px auto;
+	margin: 20px auto 40px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -412,7 +414,8 @@ header .desktop-header ul li a i {
 	font-weight: 800;
 	background: linear-gradient(
 		60deg,
-		rgba(183, 41, 126, 1) 0%,
+		rgba(183, 42, 126, 1) 0%,
+		rgba(136, 43, 117, 1) 69%,
 		rgba(43, 35, 91, 1) 100%
 	);
 	background-clip: text;
@@ -452,6 +455,17 @@ header .desktop-header ul li a i {
 	}
 	#content .slider-arrow {
 		top: -60px;
+	}
+	#content .content-header h3 {
+		font-size: 24px;
+	}
+
+	#content .content-header h2 {
+		font-size: 54px;
+	}
+
+	#content .content-header p {
+		font-size: 20px;
 	}
 }
 
@@ -545,10 +559,16 @@ header .desktop-header ul li a i {
 		font-size: 30px;
 	}
 	#content #top-content {
-		scroll-margin-top: 10px;
+		scroll-margin-top: 100px;
 	}
 	#content .slider-arrow {
 		top: -90px;
+	}
+	.internet-offers {
+		flex-direction: row;
+	}
+	.internet-offers .offer {
+		margin: 20px 30px;
 	}
 }
 

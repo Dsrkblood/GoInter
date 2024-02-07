@@ -1,3 +1,9 @@
+import speedImage100 from "../../assets/price-icon01.png";
+import speedImage300 from "../../assets/price-icon02.png";
+import speedImage600 from "../../assets/price-icon03.png";
+
+import InternetOffer from "./InternetOffer";
+
 export default function Content() {
 	return (
 		<div id='content'>
@@ -15,46 +21,27 @@ export default function Content() {
 					<p>Dostępny również w Pakietach z Telewizją</p>
 				</div>
 				<div className='internet-offers'>
-					<div className='offer'>
-						<div className='header-offer'>
-							<h3>internet 100 mb/s</h3>
-						</div>
-						<div className='plan'>
-							<div className='speed'>
-								<div className='download'>
-									<p>100</p>
-									<p className='units'>mb/s</p>
-								</div>
-								<div className='uppload'>
-									<p>20</p>
-									<p className='units'>mb/s</p>
-								</div>
-							</div>
-							<div className='plan-icon'></div>
-						</div>
-						<div className='plan-features'>
-							<ul>
-								<li>Szybki internet światłowodowy</li>
-							</ul>
-							<ul>
-								<li>Dwupasmowy router Wi-Fi ac</li>
-							</ul>
-							<ul>
-								<li>Gwarancja niezawodności</li>
-							</ul>
-							<ul>
-								<li>Wsparcie techniczne</li>
-							</ul>
-						</div>
-						<div className='plan-price'>
-							<span className='small'>zł</span>
-							<span className='big'>50</span>
-							<span className='small'>/ms-c</span>
-						</div>
-						<button>
-							<a href='#'>zamów</a>
-						</button>
-					</div>
+					<InternetOffer
+						title='100'
+						download='100'
+						upload='20'
+						offerImg={speedImage100}
+						price='50'
+					/>
+					<InternetOffer
+						title='300'
+						download='300'
+						upload='60'
+						offerImg={speedImage300}
+						price='80'
+					/>
+					<InternetOffer
+						title='600'
+						download='600'
+						upload='120'
+						offerImg={speedImage600}
+						price='100'
+					/>
 				</div>
 			</section>
 		</div>
