@@ -31,7 +31,7 @@ export default function InternetPromo() {
 					/>
 					<ActivePromo
 						active={!active}
-						content={["telewizja", "na", "każdą", "kieszeń"]}
+						content={["telewizja", "dla", "całej", "rodziny"]}
 						smallContent={{
 							first: "bogata oferta",
 							seccond: "kanałów tematycznych",
