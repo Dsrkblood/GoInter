@@ -9,9 +9,6 @@ export default function ParticlesAnimation() {
 		<Particles
 			id='particles'
 			options={{
-				fullScreen: {
-					enable: false,
-				},
 				fpsLimit: 120,
 				interactivity: {
 					events: {
@@ -55,7 +52,7 @@ export default function ParticlesAnimation() {
 						color: "#fff",
 						distance: 150,
 						enable: true,
-						opacity: 0.5,
+						opacity: 0.3,
 						width: 1,
 					},
 					move: {
@@ -65,23 +62,23 @@ export default function ParticlesAnimation() {
 							default: "out",
 						},
 						random: false,
-						speed: 10,
+						speed: 5,
 						straight: false,
 					},
 					number: {
 						density: {
 							enable: true,
 						},
-						value: 100,
+						value: 150,
 					},
 					opacity: {
-						value: 0.5,
+						value: 0.4,
 					},
 					shape: {
 						type: "circle",
 					},
 					size: {
-						value: { min: 1, max: 5 },
+						value: { min: 2, max: 4 },
 					},
 				},
 				detectRetina: true,

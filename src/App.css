@@ -94,6 +94,7 @@ header .desktop-header ul li a i {
 }
 
 #nav .company_name {
+	padding-right: 10px;
 	font-weight: 800;
 	font-style: italic;
 	letter-spacing: -2px;
@@ -175,7 +176,7 @@ header .desktop-header ul li a i {
 	top: 45px;
 	font-size: 10px;
 	font-weight: 300;
-	letter-spacing: normal;
+	letter-spacing: 1px;
 }
 
 .container .top .promo-text .active {
@@ -275,26 +276,56 @@ header .desktop-header ul li a i {
 }
 
 #content {
+	position: relative;
 	margin-top: 100px;
 	text-align: center;
 	color: var(--header-color);
 }
 
-#content h3 {
+#content .slider-arrow {
+	position: absolute;
+	top: -80px;
+	left: 50%;
+	height: 50px;
+	width: 90px;
+	border-top-right-radius: 50px;
+	border-top-left-radius: 50px;
+	background-color: var(--primary-color);
+	transform: translateX(-50%);
+}
+#content .slider-arrow a {
+	display: flex;
+	flex-direction: column;
+	padding-top: 5px;
+	text-decoration: none;
+	cursor: pointer;
+	z-index: 3;
+}
+#content .slider-arrow a i {
+	margin-top: -4px;
+	font-size: 16px;
+	color: #5b83cd;
+}
+
+#content .content-header {
+	scroll-margin-top: 80px;
+}
+
+#content .content-header h3 {
 	font-weight: 300;
 	font-size: 18px;
 	text-transform: uppercase;
 	letter-spacing: 2px;
 }
 
-#content h2 {
+#content .content-header h2 {
 	text-transform: uppercase;
 	font-size: 32px;
 	letter-spacing: 1.5px;
 	word-wrap: break-word;
 }
 
-#content p {
+#content .content-header p {
 	font-size: 14px;
 }
 
@@ -306,6 +337,12 @@ header .desktop-header ul li a i {
 	.container {
 		margin: 0 auto 50px;
 		width: 85%;
+	}
+	#content .content-header {
+		scroll-margin-top: 64px;
+	}
+	#content .slider-arrow {
+		top: -60px;
 	}
 }
 
@@ -338,10 +375,16 @@ header .desktop-header ul li a i {
 	}
 	.container .top .promo-text h1 .small-text {
 		top: 50px;
-		font-size: 16px;
+		font-size: 14px;
 	}
 	.container .top .social {
 		font-size: 20px;
+	}
+	#content .content-header {
+		scroll-margin-top: 80px;
+	}
+	#content .slider-arrow {
+		top: -75px;
 	}
 }
 @media screen and (min-width: 992px) {
@@ -391,6 +434,12 @@ header .desktop-header ul li a i {
 	.container .top .promo-text h1 .small-text {
 		top: 110px;
 		font-size: 30px;
+	}
+	#content .content-header {
+		scroll-margin-top: 110px;
+	}
+	#content .slider-arrow {
+		top: -90px;
 	}
 }
 
