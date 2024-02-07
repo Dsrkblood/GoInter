@@ -334,7 +334,6 @@ header .desktop-header ul li a i {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	/* margin-top: 20px; */
 }
 .internet-offers .offer {
 	margin: 40px auto;
@@ -346,6 +345,20 @@ header .desktop-header ul li a i {
 .internet-offers .offer .header-offer {
 	border-radius: 10px 10px 0 0;
 	background: var(--particle-gradient-color);
+}
+.internet-offers .offer:nth-child(2) .header-offer {
+	background: linear-gradient(
+		60deg,
+		rgba(50, 104, 158, 1) 0%,
+		rgba(49, 151, 212, 1) 100%
+	);
+}
+.internet-offers .offer:nth-child(3) .header-offer {
+	background: linear-gradient(
+		60deg,
+		rgba(33, 131, 146, 1) 0%,
+		rgba(50, 183, 193, 1) 100%
+	);
 }
 
 .internet-offers .offer .header-offer h3 {
@@ -568,7 +581,8 @@ header .desktop-header ul li a i {
 		flex-direction: row;
 	}
 	.internet-offers .offer {
-		margin: 20px 30px;
+		/* margin: 30px 60px; */
+		width: auto;
 	}
 }
 
