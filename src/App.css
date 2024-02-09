@@ -573,6 +573,21 @@ header .desktop-header ul li a i {
 	object-fit: contain;
 }
 
+footer {
+	padding: 10px 0;
+	background: var(--particle-gradient-color);
+	text-align: center;
+	color: var(--primary-color);
+}
+footer p a {
+	text-decoration: none;
+	color: var(--primary-color);
+}
+
+footer p a i {
+	margin: 0 5px;
+}
+
 @media screen and (min-width: 576px) {
 	.mobile-header ul li {
 		display: inline;
