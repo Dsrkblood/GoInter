@@ -15,6 +15,7 @@
 		rgba(193, 128, 191, 1) 90%
 	);
 	--text-purple: #c280bf;
+	--text-blue: #5b83cd;
 	--section-background-color: linear-gradient(
 		4deg,
 		rgba(140, 130, 193, 1) 0%,
@@ -60,7 +61,7 @@ header .desktop-header ul li a {
 }
 
 header .mobile-header ul li a:hover {
-	color: #5b83cd;
+	color: var(--text-blue);
 }
 
 header .desktop-header ul li a:hover {
@@ -69,7 +70,7 @@ header .desktop-header ul li a:hover {
 
 header .mobile-header ul li a i {
 	margin-right: 10px;
-	color: #5b83cd;
+	color: var(--text-blue);
 	font-size: 14px;
 }
 
@@ -87,7 +88,7 @@ header .desktop-header ul li a i {
 	top: 0;
 	padding: 0 20px;
 	width: 100%;
-	z-index: 1;
+	z-index: 2;
 	transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
 }
 
@@ -313,7 +314,7 @@ header .desktop-header ul li a i {
 #content .slider-arrow a i {
 	margin-top: -4px;
 	font-size: 16px;
-	color: #5b83cd;
+	color: var(--text-blue);
 }
 
 #content #top-content {
@@ -400,7 +401,7 @@ header .desktop-header ul li a i {
 	color: var(--header-color);
 }
 .internet-offers .offer .plan .download {
-	color: #5b83cd;
+	color: var(--text-blue);
 }
 .internet-offers .offer .plan .upload {
 	color: var(--text-purple);
@@ -480,6 +481,9 @@ header .desktop-header ul li a i {
 }
 
 .about-us .container {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
 	padding: 70px 15px 130px;
 }
 
@@ -542,20 +546,29 @@ header .desktop-header ul li a i {
 }
 .about-us .container .content .btn button {
 	padding: 20px 10px;
-	text-transform: uppercase;
-	color: var(--text-purple);
 	font-size: 12px;
+	font-weight: 600;
+	color: var(--text-purple);
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
 	border: none;
 	border-radius: 10px;
 	background-color: var(--primary-color);
 	cursor: pointer;
+	transition: color 0.3s ease-in;
+}
+
+.about-us .container .content .btn button:hover {
+	color: var(--text-blue);
 }
 
 .about-us .container .content-img {
 	margin-top: 40px;
+	width: 100%;
 }
 
 .about-us .container .content-img img {
+	max-width: 800px;
 	width: 100%;
 	object-fit: contain;
 }
@@ -588,6 +601,11 @@ header .desktop-header ul li a i {
 	}
 	.internet-offers .offer {
 		width: 400px;
+	}
+
+	.about-us .container .content p:first-of-type,
+	.about-us .container .content p:last-of-type {
+		font-size: 20px;
 	}
 }
 
@@ -699,6 +717,27 @@ header .desktop-header ul li a i {
 		min-width: 300px;
 		max-width: 400px;
 		margin: 40px 10px;
+	}
+	.about-us .container {
+		flex-direction: row;
+		align-items: center;
+		width: 80%;
+	}
+	.about-us .container .content {
+		width: 50%;
+		margin-left: 50px;
+		text-align: left;
+		order: 2;
+	}
+	.about-us .container .content h3 {
+		margin-bottom: 50px;
+	}
+	.about-us .container .content .btn {
+		margin-top: 50px;
+	}
+	.about-us .container .content-img {
+		width: 50%;
+		order: 1;
 	}
 }
 
