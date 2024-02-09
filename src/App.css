@@ -14,16 +14,23 @@
 		rgba(93, 131, 205, 1) 15%,
 		rgba(193, 128, 191, 1) 90%
 	);
+	--text-purple: #c280bf;
+	--section-background-color: linear-gradient(
+		4deg,
+		rgba(140, 130, 193, 1) 0%,
+		rgba(105, 166, 193, 1) 100%
+	);
 }
 
 body {
+	overflow-x: hidden;
 	position: relative;
 	width: 100%;
 	font-family: "Poppins", sans-serif;
+	background-color: #f7f6fb;
 }
 
 #root {
-	height: 300vh;
 }
 
 header {
@@ -57,7 +64,7 @@ header .mobile-header ul li a:hover {
 }
 
 header .desktop-header ul li a:hover {
-	color: #c280bf;
+	color: var(--text-purple);
 }
 
 header .mobile-header ul li a i {
@@ -68,7 +75,7 @@ header .mobile-header ul li a i {
 
 header .desktop-header ul li a i {
 	margin-right: 10px;
-	color: #c280bf;
+	color: var(--text-purple);
 	font-size: 14px;
 }
 
@@ -85,7 +92,8 @@ header .desktop-header ul li a i {
 }
 
 #nav.active {
-	background-color: #f8f5f8;
+	background-color: var(--primary-color);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 #nav .company_name,
@@ -334,6 +342,7 @@ header .desktop-header ul li a i {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	margin-bottom: 100px;
 }
 .internet-offers .offer {
 	margin: 40px auto;
@@ -346,9 +355,6 @@ header .desktop-header ul li a i {
 	background-color: #fff;
 }
 
-.internet-offers .offer:hover {
-	scale: 1.15;
-}
 .internet-offers .offer .header-offer {
 	border-radius: 10px 10px 0 0;
 
@@ -397,7 +403,7 @@ header .desktop-header ul li a i {
 	color: #5b83cd;
 }
 .internet-offers .offer .plan .upload {
-	color: #c280bf;
+	color: var(--text-purple);
 }
 .internet-offers .offer .plan .plan-icon {
 	margin-left: 20px;
@@ -467,6 +473,93 @@ header .desktop-header ul li a i {
 .internet-offers .offer a:hover {
 	color: var(--header-color);
 }
+
+.section-bg {
+	background: var(--section-background-color);
+	width: 100%;
+}
+
+.about-us .container {
+	padding: 70px 15px 130px;
+}
+
+.about-us .container .content h5 {
+	font-size: 24px;
+	font-weight: 200;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+}
+
+.about-us .container .content h3 {
+	font-weight: 500;
+	font-size: 36px;
+	line-height: 1.1;
+	margin-bottom: 20px;
+}
+.about-us .container .content h3 span {
+	font-size: 40px;
+	letter-spacing: -2px;
+	font-weight: 800;
+	background: linear-gradient(
+		60deg,
+		rgba(183, 42, 126, 1) 0%,
+		rgba(136, 43, 117, 1) 69%,
+		rgba(43, 35, 91, 1) 100%
+	);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.about-us .container .content p:first-of-type {
+	margin: 25px 0 10px;
+	font-style: italic;
+	font-weight: 700;
+	letter-spacing: 1px;
+}
+.about-us .container .content p:last-of-type {
+	margin: 5px 0 20px;
+	font-size: 16px;
+	font-weight: 200;
+	letter-spacing: 1px;
+}
+.about-us .container .content p:last-of-type span {
+	font-weight: 800;
+	letter-spacing: normal;
+	background: linear-gradient(
+		60deg,
+		rgba(183, 42, 126, 1) 0%,
+		rgba(136, 43, 117, 1) 69%,
+		rgba(43, 35, 91, 1) 100%
+	);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.about-us .container .content .btn {
+	display: flex;
+	justify-content: start;
+}
+.about-us .container .content .btn button {
+	padding: 20px 10px;
+	text-transform: uppercase;
+	color: var(--text-purple);
+	font-size: 12px;
+	border: none;
+	border-radius: 10px;
+	background-color: var(--primary-color);
+	cursor: pointer;
+}
+
+.about-us .container .content-img {
+	margin-top: 40px;
+}
+
+.about-us .container .content-img img {
+	width: 100%;
+	object-fit: contain;
+}
+
 @media screen and (min-width: 576px) {
 	.mobile-header ul li {
 		display: inline;
@@ -549,10 +642,6 @@ header .desktop-header ul li a i {
 	header .mobile-header ul li {
 		display: inline;
 	}
-	header .mobile-header ul li a i,
-	header .desktop-header ul li a i {
-		font-size: 20px;
-	}
 	#nav {
 		padding: 0 50px;
 	}
@@ -597,14 +686,20 @@ header .desktop-header ul li a i {
 		top: -90px;
 	}
 	.internet-offers {
+		margin-top: 40px;
 		padding: 0 2%;
 		flex-direction: row;
 		justify-content: space-around;
+	}
+	.internet-offers .offer:hover {
+		z-index: 1;
+		scale: 1.15;
 	}
 	.internet-offers .offer {
 		min-width: 300px;
 		max-width: 400px;
 		margin: 0 10px;
+		z-index: 0;
 	}
 }
 
