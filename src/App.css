@@ -15,14 +15,17 @@ html {
 	--text-info-primary: #5b83cd;
 	--text-info-secondary: #c280bf;
 	--primary-gradient: linear-gradient(
-		60deg,
-		rgba(93, 131, 205, 1) 15%,
-		rgba(193, 128, 191, 1) 90%
+		45deg,
+		rgba(15, 57, 105, 1) 0%,
+		rgba(168, 152, 197, 1) 50%,
+		rgba(103, 37, 98, 1) 100%
 	);
+
 	--secondary-gradient: linear-gradient(
-		4deg,
-		rgba(140, 130, 193, 1) 0%,
-		rgba(105, 166, 193, 1) 100%
+		45deg,
+		rgba(154, 126, 200, 1) 0%,
+		rgba(125, 146, 193, 1) 50%,
+		rgba(4, 82, 118, 1) 100%
 	);
 	scroll-behavior: smooth;
 }
@@ -384,7 +387,11 @@ header .help ul li a i {
 	);
 }
 .internet-offers .offer:nth-child(3) .header-offer {
-	background: var(--primary-gradient);
+	background: linear-gradient(
+		60deg,
+		rgba(93, 131, 205, 1) 15%,
+		rgba(193, 128, 191, 1) 90%
+	);
 }
 
 .internet-offers .offer .header-offer h3 {
@@ -549,6 +556,71 @@ header .help ul li a i {
 	max-width: 40rem;
 	width: 100%;
 	object-fit: contain;
+}
+
+#info .container {
+	display: flex;
+	justify-content: space-evenly;
+	margin: 7rem 2rem;
+	width: 100%;
+}
+
+#info .container .info-box {
+	display: flex;
+	flex-direction: column;
+	margin: 0 1rem;
+	width: 25%;
+	color: var(--secondary-color);
+}
+
+#info .container .info-box h4 {
+	margin-bottom: 2rem;
+	font-size: 3rem;
+	text-transform: uppercase;
+	letter-spacing: 0.5rem;
+}
+#info .container .info-box h4 span {
+	letter-spacing: -0.2rem;
+}
+
+#info .container .info-box p {
+	font-size: 1.6rem;
+}
+
+#info .container a {
+	font-size: 1.6rem;
+	color: var(--secondary-color);
+	text-decoration: none;
+}
+
+#info .container .offer a {
+	color: var(--text-info-secondary);
+}
+
+#info .container .important a {
+	color: var(--text-info-primary);
+}
+
+#info .container .info-box ul li {
+	padding: 0.9rem 0;
+	list-style: none;
+	border-bottom: .1rem solid rgba(0, 0, 0, 0.1);
+}
+
+#info .container .info-box ul li:last-of-type {
+	border: none;
+}
+
+#info .container .info-box.contact {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+#info .container .info-box.contact .column a,
+#info .container .info-box.contact .column p {
+	margin: 0.9rem 0;
+	display: block;
 }
 
 footer {
