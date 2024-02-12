@@ -1,4 +1,4 @@
-import { useRef, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 import MenuModal from "./MenuModal";
 
@@ -18,15 +18,13 @@ export default function Navbar() {
 		};
 	}, []);
 
-
-
 	function handleOpen() {
 		setIsOpen(prevOpen => !prevOpen);
 	}
 
 	return (
 		<nav id='nav' className={isNavScrolled ? "active" : null}>
-			<p className='company_name'>gointer</p>
+			<p className='company_name highlighted-text'>gointer</p>
 			<div className='mobile'>
 				<button onClick={handleOpen} className='menu'>
 					<i className='fa-solid fa-bars'></i>

@@ -4,13 +4,13 @@ export default function SocialMedia() {
 			<div className='social'>
 				<p className='social-heading'>media </p>
 				<div className='social-icons'>
-					<a href='#'>
+					<a href='#' className='facebook'>
 						<i className='fa-brands fa-facebook-f'></i>
 					</a>
-					<a href='#'>
+					<a href='#' className='linkedin'>
 						<i className='fa-brands fa-linkedin-in'></i>
 					</a>
-					<a href='#'>
+					<a href='#' className='twitter'>
 						<i className='fa-brands fa-x-twitter'></i>
 					</a>
 				</div>

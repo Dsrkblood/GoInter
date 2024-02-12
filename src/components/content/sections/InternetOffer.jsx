@@ -43,7 +43,7 @@ export default function InternetOffer({
 			</div>
 			<div className='plan-price'>
 				<span className='small'>zł</span>
-				<span className='big'>{price}</span>
+				<span className='big highlighted-text'>{price}</span>
 				<span className='small'>/ms-c</span>
 			</div>
 

@@ -1,10 +1,13 @@
+import { createPortal } from "react-dom";
 export default function MenuModal({ open, ...props }) {
 	if (open) {
-		return (
-			<div className={"menu-modal"}>
-				<button {...props}>
-					<i className='fa-solid fa-xmark'></i>
-				</button>
+		return createPortal(
+			<div className={`menu-modal`}>
+				<div className='top'>
+					<button {...props}>
+						<i className='fa-solid fa-xmark'></i>
+					</button>
+				</div>
 				<div className='links'>
 					<a href='#'>start</a>
 					<a href='#'>internet</a>
@@ -16,7 +19,8 @@ export default function MenuModal({ open, ...props }) {
 					<a href='#'>o nas</a>
 					<a href='#'>kontakt</a>
 				</div>
-			</div>
+			</div>,
+			document.getElementById("modal")
 		);
 	}
 }
