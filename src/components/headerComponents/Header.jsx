@@ -1,12 +1,12 @@
-import ParticlesAnimation from "../ParticlesAnimation";
+import ParticlesAnimation from "./ParticlesAnimation";
 import Navbar from "./navComponents/Navbar";
-import InternetPromo from "./promoContent/InternetPromo";
+import BrandPillarsVault from "./promoContent/BrandPillarsVault";
 export default function Header() {
 	return (
 		<>
 			<ParticlesAnimation />
 			<Navbar />
-			<InternetPromo />
+			<BrandPillarsVault />
 		</>
 	);
 }

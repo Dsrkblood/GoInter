@@ -1,8 +1,8 @@
 import { createPortal } from "react-dom";
-export default function MenuModal({ open, ...props }) {
+export default function Modal({ open, ...props }) {
 	if (open) {
 		return createPortal(
-			<div className={`menu-modal`}>
+			<div className={`modal`}>
 				<div className='top'>
 					<button {...props}>
 						<i className='fa-solid fa-xmark'></i>

@@ -1,4 +1,5 @@
-export default function InternetOffer({
+/* eslint-disable react/prop-types */
+export default function InternetCard({
 	title,
 	download,
 	upload,
@@ -6,14 +7,14 @@ export default function InternetOffer({
 	price,
 }) {
 	return (
-		<div className='offer'>
-			<div className='header-offer'>
+		<div className='card-box'>
+			<div className='header'>
 				<h3>
 					internet <span>{title} mb/s</span>
 				</h3>
 			</div>
-			<div className='plan'>
-				<div className='speed'>
+			<div className='performance'>
+				<div>
 					<div className='download'>
 						<p>{download}</p>
 						<p className='units'>mb/s</p>
@@ -23,7 +24,7 @@ export default function InternetOffer({
 						<p className='units'>mb/s</p>
 					</div>
 				</div>
-				<div className='plan-icon'>
+				<div className='performance-icon'>
 					<img src={offerImg} alt='' />
 				</div>
 			</div>

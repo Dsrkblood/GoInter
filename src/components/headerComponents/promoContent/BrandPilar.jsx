@@ -1,10 +1,5 @@
 /* eslint-disable react/prop-types */
-export default function ActivePromo({
-	active,
-	content,
-	smallContent,
-	...props
-}) {
+export default function BrandPilar({ active, content, smallContent }) {
 	if (active) {
 		return (
 			<h1 className={active ? "active" : null}>

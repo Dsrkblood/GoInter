@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import MenuModal from "./MenuModal";
+import Modal from "./Modal";
 
 export default function Navbar() {
 	const [isNavScrolled, setIsNavScrolled] = useState(false);
@@ -29,6 +29,7 @@ export default function Navbar() {
 				<button onClick={handleOpen} className='menu'>
 					<i className='fa-solid fa-bars'></i>
 				</button>
+				<Modal open={isOpen} onClick={handleOpen} />
 			</div>
 			<div className='desktop'>
 				<a href='#'>start</a>
@@ -38,7 +39,6 @@ export default function Navbar() {
 				<a href='#'>monitoring</a>
 				<i className='fa-solid fa-ellipsis'></i>
 			</div>
-			<MenuModal open={isOpen} onClick={handleOpen} />
 		</nav>
 	);
 }

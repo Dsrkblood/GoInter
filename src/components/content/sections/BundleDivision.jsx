@@ -1,32 +1,32 @@
 import speedImage100 from "../../../assets/price-icon01.png";
 import speedImage300 from "../../../assets/price-icon02.png";
 import speedImage600 from "../../../assets/price-icon03.png";
-import InternetOffer from "./InternetOffer";
+import InternetCard from "./InternetCard";
 
-export default function TopSection() {
+export default function BundleDivision() {
 	return (
-		<section id='top-content'>
+		<section id='bundle-division'>
 			<div className='content-header'>
 				<h3>wybierz swój</h3>
 				<h2>internet światłowodowy</h2>
 				<p>Dostępny również w Pakietach z Telewizją</p>
 			</div>
-			<div className='internet-offers'>
-				<InternetOffer
+			<div className='offers'>
+				<InternetCard
 					title='100'
 					download='100'
 					upload='20'
 					offerImg={speedImage100}
 					price='50'
 				/>
-				<InternetOffer
+				<InternetCard
 					title='300'
 					download='300'
 					upload='60'
 					offerImg={speedImage300}
 					price='80'
 				/>
-				<InternetOffer
+				<InternetCard
 					title='600'
 					download='600'
 					upload='120'

@@ -1,8 +1,8 @@
 import { useEffect, useState, useCallback } from "react";
 import SocialMedia from "./SocialMedia";
-import ActivePromo from "./ActivePromo";
+import BrandPilar from "./BrandPilar";
 
-export default function InternetPromo() {
+export default function BrandPillarsVault() {
 	const [active, setActive] = useState(true);
 
 	const handleActive = useCallback(function handleActive(boolen) {
@@ -18,10 +18,10 @@ export default function InternetPromo() {
 	}, [handleActive]);
 
 	return (
-		<div className='container'>
+		<div id='header' className='container'>
 			<div className='top'>
-				<div className='promo-text' key={active ? "Internet" : "TV"}>
-					<ActivePromo
+				<div className='main-pilar' key={active ? "Internet" : "TV"}>
+					<BrandPilar
 						active={active}
 						content={["internet", "na", "każdą", "kieszeń"]}
 						smallContent={{
@@ -29,7 +29,7 @@ export default function InternetPromo() {
 							seccond: "w twojej okolicy",
 						}}
 					/>
-					<ActivePromo
+					<BrandPilar
 						active={!active}
 						content={["telewizja", "dla", "całej", "rodziny"]}
 						smallContent={{
@@ -48,7 +48,7 @@ export default function InternetPromo() {
 				</button>
 				<button
 					onClick={() => handleActive(false)}
-					className={active ? null : "active"}>
+					className={!active ? "active" : null}>
 					02
 				</button>
 			</div>

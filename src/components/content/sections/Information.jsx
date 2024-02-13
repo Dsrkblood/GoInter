@@ -1,16 +1,16 @@
 import aboutUsImg from "../../../assets/tmp_aboutus.png";
 
-export default function AboutUs() {
+export default function Information() {
 	return (
-		<section className='section-bg '>
-			<div className='about-us'>
+		<section className='section-bg info'>
+			<div className='container'>
 				<div className='box content'>
 					<h5>wybierz nas</h5>
 					<h3>
 						<span className="highlighted-text">GOINTER</span> jest pewny
 					</h3>
-					<p>Wykorzystaj potęgę światłowodu!</p>
-					<p>
+					<p className="italic">Wykorzystaj potęgę światłowodu!</p>
+					<p className="description">
 						Szybki, sprawdzony i tani światłowód w firmie{" "}
 						<span className='highlighted-text'>GOINTER</span>, to pewny dostęp
 						do Internetu, telewizji oraz telefonii w naszym regionie. Możlowiści
