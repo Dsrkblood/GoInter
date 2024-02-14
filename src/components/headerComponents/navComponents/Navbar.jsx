@@ -30,10 +30,10 @@ export default function Navbar() {
 					<button onClick={handleOpen} className='menu'>
 						<i className='fa-solid fa-bars'></i>
 					</button>
-					<Modal open={isOpen} onClick={handleOpen} />
+					<Modal open={isOpen} handleOpen={handleOpen} />
 				</div>
 				<div className='desktop'>
-					<a href='#'>start</a>
+					<a href='#top'>start</a>
 					<a href='#'>internet</a>
 					<a href='#'>telefon</a>
 					<a href='#'>telewizja</a>

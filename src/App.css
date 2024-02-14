@@ -214,6 +214,7 @@ header .help ul li a i {
 	letter-spacing: -0.25rem;
 }
 #header.container .top .main-pilar h1 .small-text {
+	width: 65%;
 	position: absolute;
 	top: 4.5rem;
 	right: 0;
