@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-
 import Modal from "./Modal";
 
 export default function Navbar({ changeContent }) {
@@ -38,10 +37,10 @@ export default function Navbar({ changeContent }) {
 				</div>
 				<div className='desktop'>
 					<a href='#top'>start</a>
-					<a href='#'>internet</a>
-					<a href='#'>telefon</a>
-					<a href='#'>telewizja</a>
-					<a href='#'>monitoring</a>
+					<a href='#top'>internet</a>
+					<a href='#top'>telefon</a>
+					<a href='#top'>telewizja</a>
+					<a href='#top'>monitoring</a>
 					<i className='fa-solid fa-ellipsis'></i>
 				</div>
 			</nav>
