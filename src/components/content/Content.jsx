@@ -17,7 +17,6 @@ export default function Content({ content }) {
 		console.log(key);
 	}
 
-
 	return (
 		<div id='content'>
 			<div className='slider-arrow'>
@@ -27,7 +26,7 @@ export default function Content({ content }) {
 					<i className='fa-solid fa-chevron-down'></i>
 				</a>
 			</div>
-			{/* {offerList} */}
+			<BundleDivision />
 			{mainContent}
 		</div>
 	);
