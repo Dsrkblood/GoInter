@@ -3,7 +3,7 @@ import speedImage300 from "../../../assets/price-icon02.png";
 import speedImage600 from "../../../assets/price-icon03.png";
 import InternetCard from "./InternetCard";
 
-export default function BundleDivision() {
+export default function BundleDivision({ content }) {
 	return (
 		<section id='bundle-division'>
 			<div className='content-header'>

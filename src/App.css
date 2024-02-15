@@ -281,6 +281,31 @@ header .help ul li a i {
 #header.container .bottom button.active {
 	text-decoration: overline;
 }
+#header.container-section {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	text-align: center;
+	height: 25rem;
+	width: 100%;
+	animation: fadein 5s;
+	text-transform: uppercase;
+	color: var(--primary-color);
+}
+
+#header.container-section .top-section .section-description h1 {
+	font-weight: 700;
+	font-size: 3.2rem;
+	line-height: 1;
+	letter-spacing: 0.3rem;
+	word-wrap: break-word;
+}
+
+#header.container-section .bottom-section {
+	font-weight: 300;
+	font-size: 1.2rem;
+	letter-spacing: 0.5rem;
+}
 
 .modal {
 	position: fixed;
@@ -831,6 +856,13 @@ footer .bottom p a:hover {
 	#header.container .top .social .social-icons a {
 		font-size: 1.6rem;
 	}
+	#header.container-section {
+		padding: 0 3rem;
+		height: 29rem;
+	}
+	#header.container-section .top-section .section-description h1 {
+		font-size: 4.2rem;
+	}
 	#content #bundle-division {
 		scroll-margin-top: 80px;
 	}
@@ -902,6 +934,12 @@ footer .bottom p a:hover {
 	#header.container .top .main-pilar h1 .small-text {
 		top: 11rem;
 		font-size: 3rem;
+	}
+	#header.container-section {
+		height: 54rem;
+	}
+	#header.container-section .top-section .section-description h1 {
+		font-size: 7rem;
 	}
 	#content #bundle-division {
 		scroll-margin-top: 100px;
