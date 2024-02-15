@@ -1,11 +1,11 @@
 import ParticlesAnimation from "./ParticlesAnimation";
 import Navbar from "./navComponents/Navbar";
 import BrandPillarsVault from "./promoContent/BrandPillarsVault";
-export default function Header() {
+export default function Header({ changeContent }) {
 	return (
 		<>
 			<ParticlesAnimation />
-			<Navbar />
+			<Navbar changeContent={changeContent} />
 			<BrandPillarsVault />
 		</>
 	);

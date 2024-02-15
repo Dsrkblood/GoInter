@@ -1,5 +1,15 @@
 import { createPortal } from "react-dom";
-export default function Modal({ open, handleOpen }) {
+import LinkModal from "./LinkModal";
+import { CONTENT } from "../../../data.js";
+
+export default function Modal({ open, handleOpen, changeContent }) {
+	const allLinks = [];
+	for (const key in CONTENT) {
+		if (CONTENT[key].title) {
+			allLinks.push(CONTENT[key]);
+		}
+	}
+
 	if (open) {
 		return createPortal(
 			<div className={`modal`}>
@@ -9,17 +19,14 @@ export default function Modal({ open, handleOpen }) {
 					</button>
 				</div>
 				<div className='links'>
-					<a onClick={handleOpen} href='#top'>
-						start
-					</a>
-					<a href='#'>internet</a>
-					<a href='#'>telefon</a>
-					<a href='#'>telewizja</a>
-					<a href='#'>monitoring</a>
-					<a href='#'>promocje</a>
-					<a href='#'>zamów usługę</a>
-					<a href='#'>o nas</a>
-					<a href='#'>kontakt</a>
+					{allLinks.map(content => (
+						<LinkModal
+							key={content.title}
+							handleOpen={handleOpen}
+							changeContent={changeContent}
+							content={content}
+						/>
+					))}
 				</div>
 			</div>,
 			document.getElementById("modal")

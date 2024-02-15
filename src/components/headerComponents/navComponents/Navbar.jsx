@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 import Modal from "./Modal";
 
-export default function Navbar() {
+export default function Navbar({ changeContent }) {
 	const [isNavScrolled, setIsNavScrolled] = useState(false);
 	const [isOpen, setIsOpen] = useState(false);
 
@@ -30,7 +30,11 @@ export default function Navbar() {
 					<button onClick={handleOpen} className='menu'>
 						<i className='fa-solid fa-bars'></i>
 					</button>
-					<Modal open={isOpen} handleOpen={handleOpen} />
+					<Modal
+						open={isOpen}
+						handleOpen={handleOpen}
+						changeContent={changeContent}
+					/>
 				</div>
 				<div className='desktop'>
 					<a href='#top'>start</a>
