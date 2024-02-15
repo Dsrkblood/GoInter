@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import BundleDivision from "./sections/BundleDivision";
 import Information from "./sections/Information";
 import OfferPositions from "./sections/OfferPositions";
@@ -13,8 +14,11 @@ export default function Content({ content }) {
 		);
 	}
 
-	for (const key in content.offer) {
-		console.log(key);
+	let createOffer = [];
+	for (const offer in content.offer) {
+		createOffer.push(
+			<BundleDivision key={offer} offer={content.offer[offer]}/>
+			);
 	}
 
 	return (
@@ -26,7 +30,7 @@ export default function Content({ content }) {
 					<i className='fa-solid fa-chevron-down'></i>
 				</a>
 			</div>
-			<BundleDivision />
+			{createOffer.length !== 0 && createOffer}
 			{mainContent}
 		</div>
 	);

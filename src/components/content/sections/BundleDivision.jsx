@@ -1,39 +1,27 @@
-import speedImage100 from "../../../assets/price-icon01.png";
-import speedImage300 from "../../../assets/price-icon02.png";
-import speedImage600 from "../../../assets/price-icon03.png";
+/* eslint-disable react/prop-types */
 import InternetCard from "./InternetCard";
 
-export default function BundleDivision({ content }) {
+export default function BundleDivision({ offer }) {
+	let internetCards = [];
+
+	for (const element in offer.packages) {
+		internetCards.push(
+			<InternetCard
+				key={offer.packages[element].title}
+				data={offer.packages[element]}
+				btnText={offer.btnText}
+			/>
+		);
+	}
+
 	return (
 		<section id='bundle-division'>
 			<div className='content-header'>
-				<h3>wybierz swój</h3>
-				<h2>internet światłowodowy</h2>
-				<p>Dostępny również w Pakietach z Telewizją</p>
+				<h3>{offer.titleH3}</h3>
+				<h2>{offer.titleH2}</h2>
+				<p>{offer.titleParagraph}</p>
 			</div>
-			<div className='offers'>
-				<InternetCard
-					title='100'
-					download='100'
-					upload='20'
-					offerImg={speedImage100}
-					price='50'
-				/>
-				<InternetCard
-					title='300'
-					download='300'
-					upload='60'
-					offerImg={speedImage300}
-					price='80'
-				/>
-				<InternetCard
-					title='600'
-					download='600'
-					upload='120'
-					offerImg={speedImage600}
-					price='100'
-				/>
-			</div>
+			<div className='offers'>{internetCards}</div>
 		</section>
 	);
 }

@@ -1,54 +1,43 @@
 /* eslint-disable react/prop-types */
-export default function InternetCard({
-	title,
-	download,
-	upload,
-	offerImg,
-	price,
-}) {
+export default function InternetCard({ data, btnText }) {
 	return (
 		<div className='card-box'>
 			<div className='header'>
-				<h3>
-					internet <span>{title} mb/s</span>
-				</h3>
+				<h3>{data.title}</h3>
 			</div>
 			<div className='performance'>
 				<div>
 					<div className='download'>
-						<p>{download}</p>
+						<p>{data.download}</p>
 						<p className='units'>mb/s</p>
 					</div>
 					<div className='upload'>
-						<p>{upload}</p>
+						<p>{data.upload}</p>
 						<p className='units'>mb/s</p>
 					</div>
 				</div>
 				<div className='performance-icon'>
-					<img src={offerImg} alt='' />
+					<img src={data.img} alt={data.imgAlt} />
 				</div>
 			</div>
 			<div className='plan-features'>
 				<ul>
-					<li>Szybki internet światłowodowy</li>
-				</ul>
-				<ul>
-					<li>Dwupasmowy router Wi-Fi ac</li>
-				</ul>
-				<ul>
-					<li>Gwarancja niezawodności</li>
-				</ul>
-				<ul>
-					<li>Wsparcie techniczne</li>
+					{data.description.map(des => (
+						<li key={des}>{des}</li>
+					))}
 				</ul>
 			</div>
 			<div className='plan-price'>
-				<span className='small'>zł</span>
-				<span className='big highlighted-text'>{price}</span>
-				<span className='small'>/ms-c</span>
+				{data.price !== null && (
+					<>
+						<span className='small'>zł</span>
+						<span className='big highlighted-text'>{data.price}</span>
+						<span className='small'>/ms-c</span>
+					</>
+				)}
 			</div>
 
-			<a href='#'>zamów</a>
+			<a href='#'>{btnText}</a>
 		</div>
 	);
 }
