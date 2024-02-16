@@ -339,14 +339,26 @@ export const CONTENT = {
 		icons: {
 			phone: {
 				graphics: "fa-solid fa-phone",
-			
+				row: true,
+				headerFirst: "Infolinia" ,
+				headerSecond:"Pomoc techniczna",
+				descriptionFirst: "00 000 00 00" ,
+				descriptionSecond: "000 000 000",
 			},
 			location: {
 				graphics: "fa-solid fa-location-dot",
+				row: false,
+				headerFirst: "GoInter",
+				descriptionFirst: "ul. Warszawska 00",
+				descriptionSecond:"05-092 Łomianki"
 			},
-			mail:{
-				graphics: "fa-regular fa-envelope"
-			}
+			mail: {
+				graphics: "fa-regular fa-envelope",
+				row: false,
+				headerFirst: "Biuro Obsługi Klienta czynne:",
+				descriptionFirst: "Pon-Pt: 9 - 17",
+				email: "gointer@gmail.com",
+			},
 		},
 	},
 };

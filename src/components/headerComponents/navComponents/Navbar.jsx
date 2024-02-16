@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Modal from "./Modal";
+import { CONTENT } from "../../../data";
 
 export default function Navbar({ changeContent }) {
 	const [isNavScrolled, setIsNavScrolled] = useState(false);
@@ -36,11 +37,21 @@ export default function Navbar({ changeContent }) {
 					/>
 				</div>
 				<div className='desktop'>
-					<a href='#top'>start</a>
-					<a href='#top'>internet</a>
-					<a href='#top'>telefon</a>
-					<a href='#top'>telewizja</a>
-					<a href='#top'>monitoring</a>
+					<a href='#top' onClick={() => changeContent(CONTENT.start)}>
+						start
+					</a>
+					<a href='#top' onClick={() => changeContent(CONTENT.internet)}>
+						internet
+					</a>
+					<a href='#top' onClick={() => changeContent(CONTENT.phone)}>
+						telefon
+					</a>
+					<a href='#top' onClick={() => changeContent(CONTENT.tv)}>
+						telewizja
+					</a>
+					<a href='#top' onClick={() => changeContent(CONTENT.monitoring)}>
+						monitoring
+					</a>
 					<i className='fa-solid fa-ellipsis'></i>
 				</div>
 			</nav>

@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import BundleDivision from "./sections/BundleDivision";
+import Contact from "./sections/contact/Contact";
 import Information from "./sections/Information";
 import OfferPositions from "./sections/OfferPositions";
 
@@ -12,6 +13,8 @@ export default function Content({ content, changeContent }) {
 				<OfferPositions />
 			</>
 		);
+	} else if (content.title === "kontakt") {
+		mainContent = <Contact icon={content.icons} />;
 	}
 
 	let createOffer = [];
