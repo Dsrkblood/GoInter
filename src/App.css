@@ -302,9 +302,32 @@ header .help ul li a i {
 }
 
 #header.container-section .bottom-section {
+	display: flex;
+	justify-content: center;
 	font-weight: 300;
 	font-size: 1.2rem;
 	letter-spacing: 0.5rem;
+}
+
+#header.container-section .bottom-section button {
+	font-weight: 300;
+	font-size: 1.2rem;
+	letter-spacing: 0.5rem;
+	text-transform: uppercase;
+	color: var(--primary-color);
+	border: none;
+	background: none;
+	cursor: pointer;
+}
+#header.container-section .bottom-section button,
+#header.container-section .bottom-section p {
+	margin: 0 1rem;
+	transition: color 0.4s;
+}
+
+#header.container-section .bottom-section button:hover,
+#header.container-section .bottom-section p:hover {
+	color: var(--secondary-color);
 }
 
 .modal {
@@ -392,31 +415,31 @@ header .help ul li a i {
 	scroll-margin-top: 8rem;
 }
 
-#bundle-division .content-header h3 {
+#bundle-division .container .content-header h3 {
 	font-weight: 300;
 	font-size: 1.8rem;
 	text-transform: uppercase;
 	letter-spacing: 0.3rem;
 }
 
-#bundle-division .content-header h2 {
+#bundle-division .container .content-header h2 {
 	text-transform: uppercase;
 	font-size: 3.2rem;
 	letter-spacing: 0.15rem;
 	word-wrap: break-word;
 }
 
-#bundle-division .content-header p {
+#bundle-division .container .content-header p {
 	font-size: 1.4rem;
 }
 
-#bundle-division .offers {
+#bundle-division .container .offers {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin-bottom: 10rem;
+	margin-bottom: 1rem;
 }
-#bundle-division .offers .card-box {
+#bundle-division .container .offers .card-box {
 	margin: 4rem auto;
 	position: relative;
 	min-width: 30rem;
@@ -428,8 +451,8 @@ header .help ul li a i {
 	background-color: #fff;
 }
 
-#bundle-division .offers .card-box .header,
-#bundle-division .offers .card-box a {
+#bundle-division .container .offers .card-box .header,
+#bundle-division .container .offers .card-box a {
 	border-radius: 1rem 1rem 0 0;
 	background: linear-gradient(
 		60deg,
@@ -437,16 +460,16 @@ header .help ul li a i {
 		rgba(49, 105, 160, 1) 100%
 	);
 }
-#bundle-division .offers .card-box:nth-child(2) .header-offer,
-#bundle-division .offers .card-box:nth-child(2) a {
+#bundle-division .container .offers .card-box:nth-child(2) .header,
+#bundle-division .container .offers .card-box:nth-child(2) a {
 	background: linear-gradient(
 		60deg,
 		rgba(49, 106, 160, 1) 0%,
 		rgba(93, 131, 205, 1) 100%
 	);
 }
-#bundle-division .offers .card-box:nth-child(3) .header-offer,
-#bundle-division .offers .card-box:nth-child(3) a {
+#bundle-division .container .offers .card-box:nth-child(3) .header,
+#bundle-division .container .offers .card-box:nth-child(3) a {
 	background: linear-gradient(
 		60deg,
 		rgba(93, 131, 205, 1) 15%,
@@ -454,7 +477,7 @@ header .help ul li a i {
 	);
 }
 
-#bundle-division .offers .card-box .header h3 {
+#bundle-division .container .offers .card-box .header h3 {
 	display: flex;
 	flex-direction: column;
 	padding: 1rem 3rem;
@@ -464,7 +487,7 @@ header .help ul li a i {
 	color: var(--primary-color);
 }
 
-#bundle-division .offers .card-box .performance {
+#bundle-division .container .offers .card-box .performance {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -472,77 +495,81 @@ header .help ul li a i {
 	font-size: 2.4rem;
 	font-weight: 300;
 }
-#bundle-division .offers .card-box .performance .units {
+#bundle-division .container .offers .card-box .performance .units {
 	font-size: 1.2rem;
 	font-weight: 600;
 	text-transform: uppercase;
 	color: var(--secondary-color);
 }
-#bundle-division .offers .card-box .performance .download {
+#bundle-division .container .offers .card-box .performance .download {
 	color: var(--text-info-primary);
 }
-#bundle-division .offers .card-box .performance .upload {
+#bundle-division .container .offers .card-box .performance .upload {
 	color: var(--text-info-secondary);
 }
-#bundle-division .offers .card-box .performance .performance-icon {
+#bundle-division .container .offers .card-box .performance .performance-icon {
 	margin-left: 2rem;
 	width: 14rem;
 	height: 14rem;
 }
-#bundle-division .offers .card-box .plan-features ul {
+#bundle-division .container .offers .card-box .plan-features ul {
 	margin: 0 auto;
 	width: 80%;
 	color: var(--secondary-color);
 }
 
-#bundle-division .offers .card-box .plan-features ul li {
+#bundle-division .container .offers .card-box .plan-features ul li {
 	padding: 1.4rem 0;
 	font-size: 1.6rem;
 	font-weight: 300;
 	list-style: none;
 	border-top: 0.2rem solid rgba(0, 0, 0, 0.15);
 }
+#bundle-division .container .offers .card-box .plan-features ul li.highlighted{
+	margin-top: 3rem;
+	font-weight: 700;
+	color: var(--secondary-color);
+}
 
-#bundle-division .offers .card-box .plan-features ul li:last-child {
+#bundle-division .container .offers .card-box .plan-features ul li:last-child {
 	border-bottom: 0.2rem solid rgba(0, 0, 0, 0.15);
 }
-#bundle-division .offers .card-box .plan-price {
+#bundle-division .container .offers .card-box .plan-price {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	margin: 2rem auto 4rem;
 }
 
-#bundle-division .offers .card-box .plan-price .small {
+#bundle-division .container .offers .card-box .plan-price .small {
 	font-size: 1.2rem;
 	color: var(--secondary-color);
 	text-transform: uppercase;
 	letter-spacing: 0.2rem;
 }
-#bundle-division .offers .card-box .plan-price .big {
+#bundle-division .container .offers .card-box .plan-price .big {
 	margin: 0 1rem;
 	font-size: 4rem;
 }
 
-#bundle-division .offers .card-box a {
+#bundle-division .container .offers .card-box a {
 	position: absolute;
 	bottom: -2rem;
 	left: 50%;
-	width: 16rem;
+	min-width: 16rem;
+	padding: 2rem 1rem;
 	font-size: 1.4rem;
 	text-transform: uppercase;
 	text-decoration: none;
 	letter-spacing: 0.2rem;
-	line-height: 4;
 	color: var(--primary-color);
-	/* background: var(--primary-gradient); */
 	transform: translateX(-50%);
 	border-radius: 2rem;
 	border: none;
 	transition: color 0.3s ease-in-out;
 }
 
-#bundle-division .offers .card-box a:hover {
+#bundle-division .container .offers .card-box a:hover {
 	color: var(--secondary-color);
 }
 
@@ -707,6 +734,10 @@ header .help ul li a i {
 .offer-positions .container .description {
 	font-weight: 300;
 	font-size: 1.6rem;
+}
+
+footer {
+	margin-top: 6rem;
 }
 
 footer .top .container {
@@ -947,17 +978,17 @@ footer .bottom p a:hover {
 	#content #bundle-division {
 		scroll-margin-top: 100px;
 	}
-	#bundle-division .offers {
-		margin-top: 4rem;
+	#bundle-division .container .offers {
+		margin: 5rem 0 6rem;
 		padding: 0 2%;
 		flex-direction: row;
 		justify-content: space-around;
 	}
-	#bundle-division .offers .card-box:hover {
+	#bundle-division .container .offers .card-box:hover {
 		z-index: 1;
 		scale: 1.15;
 	}
-	#bundle-division .offers .card-box {
+	#bundle-division .container .offers .card-box {
 		margin: 0 2rem;
 	}
 	.info .container {

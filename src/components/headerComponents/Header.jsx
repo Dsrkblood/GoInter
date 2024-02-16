@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import ParticlesAnimation from "./ParticlesAnimation";
 import Navbar from "./navComponents/Navbar";
 import BrandPillarsVault from "./promoContent/BrandPillarsVault";
@@ -6,7 +7,7 @@ export default function Header({ changeContent, content }) {
 		<>
 			<ParticlesAnimation />
 			<Navbar changeContent={changeContent} />
-			<BrandPillarsVault content={content} />
+			<BrandPillarsVault content={content} changeContent={changeContent} />
 		</>
 	);
 }

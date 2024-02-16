@@ -3,7 +3,7 @@ import BundleDivision from "./sections/BundleDivision";
 import Information from "./sections/Information";
 import OfferPositions from "./sections/OfferPositions";
 
-export default function Content({ content }) {
+export default function Content({ content, changeContent }) {
 	let mainContent;
 	if (content.title === "start") {
 		mainContent = (
@@ -15,10 +15,17 @@ export default function Content({ content }) {
 	}
 
 	let createOffer = [];
-	for (const offer in content.offer) {
-		createOffer.push(
-			<BundleDivision key={offer} offer={content.offer[offer]}/>
+
+	if (content.offer !== undefined) {
+		for (const offer in content.offer) {
+			createOffer.push(
+				<BundleDivision
+					key={offer}
+					offer={content.offer[offer]}
+					changeContent={changeContent}
+				/>
 			);
+		}
 	}
 
 	return (
@@ -30,7 +37,8 @@ export default function Content({ content }) {
 					<i className='fa-solid fa-chevron-down'></i>
 				</a>
 			</div>
-			{createOffer.length !== 0 && createOffer}
+			<section id='bundle-division'>{createOffer}</section>
+
 			{mainContent}
 		</div>
 	);

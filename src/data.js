@@ -7,10 +7,12 @@ export const CONTENT = {
 		title: "start",
 		headerFirst: {
 			title: ["internet", "na", "każdą", "kieszeń"],
+			highlighted: false,
 			description: "najlepszy dostawca w twojej okolicy",
 		},
 		headerSecond: {
 			title: ["telewizja", "dla", "całej", "rodziny"],
+			highlighted: false,
 			description: "bogata oferta kanałów tematycznych",
 		},
 		offer: {
@@ -21,10 +23,14 @@ export const CONTENT = {
 				packages: {
 					first: {
 						title: "internet 100 mb/s",
-						download: 100,
-						upload: 20,
-						img: speedImage01,
-						imgAlt: "Obrazek pokazujący najmniejsze osiągi internetu",
+						performance: {
+							download: 100,
+							upload: 20,
+							img: speedImage01,
+							imgAlt: "Obrazek pokazujący najmniejsze osiągi internetu",
+						},
+
+						highlighted: false,
 						description: [
 							"Szybki internet światłowodowy",
 							"Dwupasmowy router Wi-Fi ac",
@@ -35,10 +41,13 @@ export const CONTENT = {
 					},
 					second: {
 						title: "internet 300 mb/s",
-						download: 300,
-						upload: 60,
-						img: speedImage02,
-						imgAlt: "Obrazek pokazujący średnie osiągi internetu",
+						performance: {
+							download: 300,
+							upload: 60,
+							img: speedImage02,
+							imgAlt: "Obrazek pokazujący średnie osiągi internetu",
+						},
+						highlighted: false,
 						description: [
 							"Szybki internet światłowodowy",
 							"Dwupasmowy router Wi-Fi ac",
@@ -49,10 +58,13 @@ export const CONTENT = {
 					},
 					third: {
 						title: "internet 600 mb/s",
-						download: 600,
-						upload: 120,
-						img: speedImage03,
-						imgAlt: "Obrazek wskazujący największe osiągi internetu",
+						performance: {
+							download: 600,
+							upload: 120,
+							img: speedImage03,
+							imgAlt: "Obrazek wskazujący największe osiągi internetu",
+						},
+						highlighted: false,
 						description: [
 							"Szybki internet światłowodowy",
 							"Dwupasmowy router Wi-Fi ac",
@@ -75,14 +87,17 @@ export const CONTENT = {
 			opticalFiber: {
 				titleH3: "szybki i nowoczesny",
 				titleH2: "internet światłowodowy 600 mb/s",
-				titleParagraph: "Dostępny również w pakietach z telewizją.",
+				titleParagraph: "Dostępny również w Pakietach z Telewizją.",
 				packages: {
 					first: {
 						title: "internet 100 mb/s",
-						download: 100,
-						upload: 20,
-						img: speedImage01,
-						imgAlt: "Obrazek pokazujący najmniejsze osiągi internetu",
+						performance: {
+							download: 100,
+							upload: 20,
+							img: speedImage01,
+							imgAlt: "Obrazek pokazujący najmniejsze osiągi internetu",
+						},
+						highlighted: false,
 						description: [
 							"Szybki internet światłowodowy",
 							"Dwupasmowy router Wi-Fi ac",
@@ -93,10 +108,13 @@ export const CONTENT = {
 					},
 					second: {
 						title: "internet 300 mb/s",
-						download: 300,
-						upload: 60,
-						img: speedImage02,
-						imgAlt: "Obrazek pokazujący średnie osiągi internetu",
+						performance: {
+							download: 300,
+							upload: 60,
+							img: speedImage02,
+							imgAlt: "Obrazek pokazujący średnie osiągi internetu",
+						},
+						highlighted: false,
 						description: [
 							"Szybki internet światłowodowy",
 							"Dwupasmowy router Wi-Fi ac",
@@ -107,10 +125,13 @@ export const CONTENT = {
 					},
 					third: {
 						title: "internet 600 mb/s",
-						download: 600,
-						upload: 120,
-						img: speedImage03,
-						imgAlt: "Obrazek wskazujący największe osiągi internetu",
+						performance: {
+							download: 600,
+							upload: 120,
+							img: speedImage03,
+							imgAlt: "Obrazek wskazujący największe osiągi internetu",
+						},
+						highlighted: false,
 						description: [
 							"Szybki internet światłowodowy",
 							"Dwupasmowy router Wi-Fi ac",
@@ -129,29 +150,38 @@ export const CONTENT = {
 					"W nowym standardzie AC zapewniamy duży zasięg oraz większe szybkości dla pobierania i wysyłania danych, oraz wyższą odporność na zakłócenia",
 				packages: {
 					first: {
-						title: "wiwi 20",
-						download: 20,
-						upload: 5,
-						img: speedImage01,
-						imgAlt: "Obrazek pokazujący najmniejsze osiągi internetu",
+						title: "wifi 20",
+						performance: {
+							download: 20,
+							upload: 5,
+							img: speedImage01,
+							imgAlt: "Obrazek pokazujący najmniejsze osiągi internetu",
+						},
+						highlighted: false,
 						description: [],
 						price: 50,
 					},
 					second: {
 						title: "wifi 30",
-						download: 30,
-						upload: 10,
-						img: speedImage02,
-						imgAlt: "Obrazek pokazujący średnie osiągi internetu",
+						performance: {
+							download: 30,
+							upload: 10,
+							img: speedImage02,
+							imgAlt: "Obrazek pokazujący średnie osiągi internetu",
+						},
+						highlighted: false,
 						description: [],
 						price: 80,
 					},
 					third: {
 						title: "wifi 50",
-						download: 50,
-						upload: 15,
-						img: speedImage03,
-						imgAlt: "Obrazek wskazujący największe osiągi internetu",
+						performance: {
+							download: 50,
+							upload: 15,
+							img: speedImage03,
+							imgAlt: "Obrazek wskazujący największe osiągi internetu",
+						},
+						highlighted: false,
 						description: [],
 						price: 100,
 					},
@@ -166,10 +196,13 @@ export const CONTENT = {
 				packages: {
 					first: {
 						title: "sym 300",
-						download: 300,
-						upload: 300,
-						img: speedImage01,
-						imgAlt: "Obrazek pokazujący najmniejsze osiągi internetu",
+						performance: {
+							download: 300,
+							upload: 300,
+							img: speedImage01,
+							imgAlt: "Obrazek pokazujący najmniejsze osiągi internetu",
+						},
+						highlighted: false,
 						description: [
 							"Gwarancja niezawodności",
 							"Wspracie techniczne",
@@ -179,10 +212,13 @@ export const CONTENT = {
 					},
 					second: {
 						title: "sym 600",
-						download: 600,
-						upload: 600,
-						img: speedImage02,
-						imgAlt: "Obrazek pokazujący średnie osiągi internetu",
+						performance: {
+							download: 600,
+							upload: 600,
+							img: speedImage02,
+							imgAlt: "Obrazek pokazujący średnie osiągi internetu",
+						},
+						highlighted: false,
 						description: [
 							"Gwarancja niezawodności",
 							"Wspracie techniczne",
@@ -191,11 +227,14 @@ export const CONTENT = {
 						price: null,
 					},
 					third: {
-						title: "syn 900",
-						download: 900,
-						upload: 900,
-						img: speedImage03,
-						imgAlt: "Obrazek wskazujący największe osiągi internetu",
+						title: "sym 900",
+						performance: {
+							download: 900,
+							upload: 900,
+							img: speedImage03,
+							imgAlt: "Obrazek wskazujący największe osiągi internetu",
+						},
+						highlighted: false,
 						description: [
 							"Gwarancja niezawodności",
 							"Wspracie techniczne",
@@ -218,6 +257,54 @@ export const CONTENT = {
 		title: "telewizja",
 		header: {
 			title: "telewizja - oferta nowoczenej telewizji",
+		},
+		offer: {
+			opticalFiber: {
+				titleH3: "nasza",
+				titleH2: "aktualna oferta",
+				packages: {
+					first: {
+						title: "smart",
+
+						highlighted: true,
+						description: [
+							"Liczba wszystkich kanałów: 152",
+							"Liczba kanałów HD: 102",
+							"Gwarancja niezawodności",
+							"Wsparcie techniczne",
+							"Dekoder z nagrywarką",
+						],
+						price: 55,
+					},
+					second: {
+						title: "optimum",
+
+						highlighted: true,
+						description: [
+							"Liczba wszystkich kanałów: 196",
+							"Liczba kanałów HD: 132",
+							"Gwarancja niezawodności",
+							"Wsparcie techniczne",
+							"Dekoder z nagrywarką",
+						],
+						price: 69,
+					},
+					third: {
+						title: "platinium",
+
+						highlighted: true,
+						description: [
+							"Liczba wszystkich kanałów: 231",
+							"Liczba kanałów HD: 159",
+							"Gwarancja niezawodności",
+							"Wsparcie techniczne",
+							"Dekoder z nagrywarką",
+						],
+						price: 102,
+					},
+				},
+				btnText: "zapytaj o szczegóły",
+			},
 		},
 	},
 	monitoring: {
@@ -248,6 +335,18 @@ export const CONTENT = {
 		title: "kontakt",
 		header: {
 			title: "dane kontaktowe",
+		},
+		icons: {
+			phone: {
+				graphics: "fa-solid fa-phone",
+			
+			},
+			location: {
+				graphics: "fa-solid fa-location-dot",
+			},
+			mail:{
+				graphics: "fa-regular fa-envelope"
+			}
 		},
 	},
 };

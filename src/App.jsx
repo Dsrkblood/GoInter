@@ -14,7 +14,7 @@ function App() {
 	return (
 		<>
 			<Header changeContent={handleChangeContent} content={content} />
-			<Content content={content} />
+			<Content changeContent={handleChangeContent} content={content} />
 			<Footer />
 		</>
 	);

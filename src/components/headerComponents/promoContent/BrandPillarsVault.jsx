@@ -1,7 +1,8 @@
+/* eslint-disable react/prop-types */
 import OtherPilar from "./OtherPilar";
 import StartPilars from "./StartPilars";
 
-export default function BrandPillarsVault({ content }) {
+export default function BrandPillarsVault({ content, changeContent }) {
 	return (
 		<div
 			id='header'
@@ -9,7 +10,7 @@ export default function BrandPillarsVault({ content }) {
 			{content.title === "start" ? (
 				<StartPilars content={content} />
 			) : (
-				<OtherPilar content={content} />
+				<OtherPilar content={content} changeContent={changeContent} />
 			)}
 		</div>
 	);
