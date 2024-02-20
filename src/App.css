@@ -155,9 +155,12 @@ nav .sidebar {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	width: 100%;
-	height: 100vh;
-	background-color: var(--primary-color);
+	width: 250px;
+	height: 80vh;
+	background-color: var(--background-color);
+	/* background-color: red; */
+	border-radius: 0 0 0 15rem;
+	box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
 	opacity: 0;
 	transition: right 0.3s ease-in, opacity 0.3s ease-in;
 	z-index: -1;
