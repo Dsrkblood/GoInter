@@ -63,116 +63,117 @@ body {
 	font-family: "Poppins", sans-serif;
 	background-color: var(--background-color);
 	overflow-x: hidden;
+	height: 200vh;
 }
 
-header {
-	display: flex;
-	justify-content: center;
-	padding: 2rem;
-	background-color: rgba(247, 246, 251, 0.85);
-}
-
-header .help {
-	display: none;
-}
-
-header .contact ul li,
-header .help ul li {
-	list-style: none;
-}
-
-header .contact ul li a,
-header .help ul li a {
-	font-size: 1.2rem;
-	font-weight: 500;
-	text-decoration: none;
-	text-transform: uppercase;
-	color: var(--secondary-color);
-	letter-spacing: 0.2em;
-	transition: color 0.3s ease-out;
-}
-
-header .contact ul li a:hover {
-	color: var(--text-info-primary);
-}
-
-header .help ul li a:hover {
-	color: var(--text-info-secondary);
-}
-
-header .contact ul li a i {
-	margin-right: 1rem;
-	font-size: 1.4rem;
-	color: var(--text-info-primary);
-}
-
-header .help ul li a i {
-	margin-right: 1rem;
-	color: var(--text-info-secondary);
-	font-size: 1.4rem;
-}
-
-#nav {
-	position: sticky;
+nav {
+	position: fixed;
+	top: 0;
+	left: 0;
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
-	top: 0;
-	padding: 0 2rem;
-	transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
-	z-index: 2;
-}
-
-#nav.active {
-	background-color: var(--primary-color);
-	border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
-}
-
-#nav .company_name,
-#nav .menu {
+	padding-inline: 2rem;
+	width: 100%;
+	background: transparent;
 	font-size: 3.6rem;
+	transition: background-color 0.5s ease-in, box-shadow 0.5s ease-in;
+	z-index: 10;
 }
 
-#nav .company_name {
-	padding-right: 1rem;
-	font-style: italic;
-	letter-spacing: -0.2rem;
+nav.active {
+	background-color: var(--background-color);
+	box-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
+}
+
+nav > p {
 	text-transform: uppercase;
+	letter-spacing: -0.2rem;
+	padding-right: 0.5rem;
 }
 
-#nav .mobile .menu {
-	color: var(--primary-color);
+nav .mobile {
+	display: flex;
+	align-items: center;
+}
+
+nav .mobile .icon {
+	position: relative;
+	width: 4rem;
+	height: 4rem;
 	background: none;
 	border: none;
-	transition: color 1s;
 	cursor: pointer;
 }
 
-#nav .desktop {
-	display: none;
-	margin-right: 10%;
+nav .mobile .icon .bar,
+nav .mobile .icon .bar::after,
+nav .mobile .icon .bar::before {
+	position: absolute;
+	display: flex;
+	width: 100%;
+	height: 0.4rem;
+	background-color: var(--primary-color);
+	border-radius: 2rem;
+	transition: transform 0.3s ease-in, background-color 0.3s ease-in;
 }
 
-#nav .desktop a,
-#nav .desktop i {
-	margin: 0 1.5rem;
-	font-size: 1.4rem;
+nav.active .mobile .icon .bar,
+nav.active .mobile .icon .bar::after,
+nav.active .mobile .icon .bar::before {
+	background-color: var(--secondary-color);
+}
+
+nav .mobile .icon .bar::after {
+	content: "";
+	left: 0;
+	top: 1rem;
+}
+
+nav .mobile .icon .bar::before {
+	content: "";
+	left: 0;
+	bottom: 1rem;
+}
+
+nav .mobile .icon.active .bar::before {
+	transform: translateY(1rem) rotate(-810deg);
+}
+
+nav .mobile .icon.active .bar {
+	transform: rotate(225deg);
+}
+
+nav .mobile .icon.active .bar::after {
+	transform: translateY(-1rem);
+}
+
+nav .sidebar {
+	position: absolute;
+	top: 0;
+	right: -100vw;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100vh;
+	background-color: var(--primary-color);
+	opacity: 0;
+	transition: right 0.3s ease-in, opacity 0.3s ease-in;
+	z-index: -1;
+}
+
+nav .sidebar.active {
+	right: 0;
+	opacity: 1;
+}
+
+nav .sidebar > a {
+	margin-block: 1rem;
+	font-size: 2rem;
 	text-transform: uppercase;
 	text-decoration: none;
-	letter-spacing: 0.2rem;
-	color: var(--primary-color);
-	cursor: pointer;
-}
-
-#nav.active .mobile .menu,
-#nav.active .desktop a,
-#nav.active .desktop i {
 	color: var(--secondary-color);
-}
-
-#nav.active .desktop a:hover,
-#nav.active .desktop i:hover {
-	color: var(--text-info-primary);
 }
 
 .back {
@@ -204,12 +205,16 @@ header .help ul li a i {
 	position: absolute;
 	top: 0;
 	width: 100%;
-	height: 45rem;
+	height: 40rem;
 	background: var(--primary-gradient);
 	z-index: -1;
 }
+#header{
+	height: 40rem;
+}
 
 #header.container {
+	padding-top: 5rem;
 	color: var(--primary-color);
 }
 #header.container .top {
@@ -297,6 +302,7 @@ header .help ul li a i {
 	text-decoration: overline;
 }
 #header.container-section {
+	padding-top: 10rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;

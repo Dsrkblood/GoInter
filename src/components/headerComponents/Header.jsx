@@ -5,8 +5,8 @@ import BrandPillarsVault from "./promoContent/BrandPillarsVault";
 export default function Header({ changeContent, content }) {
 	return (
 		<>
-			<ParticlesAnimation />
 			<Navbar changeContent={changeContent} />
+			<ParticlesAnimation />
 			<BrandPillarsVault content={content} changeContent={changeContent} />
 		</>
 	);

@@ -1,5 +1,6 @@
+/* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
-import Modal from "./Modal";
+import Links from "./Links";
 import { CONTENT } from "../../../data";
 
 export default function Navbar({ changeContent }) {
@@ -8,7 +9,7 @@ export default function Navbar({ changeContent }) {
 
 	useEffect(() => {
 		const handleScroll = () => {
-			const scrolled = window.scrollY > 88;
+			const scrolled = window.scrollY > 0;
 			setIsNavScrolled(scrolled);
 		};
 
@@ -24,19 +25,20 @@ export default function Navbar({ changeContent }) {
 
 	return (
 		<>
-			<nav id='nav' className={isNavScrolled ? "active" : null}>
-				<p className='company_name highlighted-text'>gointer</p>
+			<nav className={isNavScrolled || isOpen ? "active" : null}>
+				<p className='highlighted-text'>gointer</p>
 				<div className='mobile'>
-					<button onClick={handleOpen} className='menu'>
-						<i className='fa-solid fa-bars'></i>
+					<button
+						onClick={handleOpen}
+						className={`icon ${isOpen ? "active" : null}`}>
+						<div className='bar'></div>
 					</button>
-					<Modal
-						open={isOpen}
-						handleOpen={handleOpen}
-						changeContent={changeContent}
-					/>
 				</div>
-				<div className='desktop'>
+				<div className={`sidebar ${isOpen ? "active" : null}`}>
+					<Links handleOpen={handleOpen} changeContent={changeContent} />
+				</div>
+
+				{/* <div className='desktop'>
 					<a href='#top' onClick={() => changeContent(CONTENT.start)}>
 						start
 					</a>
@@ -53,7 +55,7 @@ export default function Navbar({ changeContent }) {
 						monitoring
 					</a>
 					<i className='fa-solid fa-ellipsis'></i>
-				</div>
+				</div> */}
 			</nav>
 
 			<a href='#top' className={`back ${isNavScrolled ? "active" : null}`}>
