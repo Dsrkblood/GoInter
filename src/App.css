@@ -208,16 +208,14 @@ nav .desktop i {
 nav .desktop .container:hover > .popup {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-	justify-content: center;
 }
 
 nav .desktop .popup {
-	padding: 2rem 1rem;
 	position: absolute;
+	display: none;
+	padding: 2rem 1rem;
 	right: -7rem;
 	top: 5rem;
-	display: none;
 	background-color: var(--background-color);
 	border-radius: 1rem;
 	text-align: center;
@@ -1032,7 +1030,7 @@ footer .bottom p a:hover {
 	nav .mobile {
 		display: none;
 	}
-	nav .desktop{
+	nav .desktop {
 		display: flex;
 	}
 	#particles {
