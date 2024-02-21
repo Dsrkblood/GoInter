@@ -38,7 +38,7 @@ export default function Navbar({ changeContent }) {
 					<Links handleOpen={handleOpen} changeContent={changeContent} />
 				</div>
 
-				{/* <div className='desktop'>
+				<div className='desktop'>
 					<a href='#top' onClick={() => changeContent(CONTENT.start)}>
 						start
 					</a>
@@ -54,8 +54,24 @@ export default function Navbar({ changeContent }) {
 					<a href='#top' onClick={() => changeContent(CONTENT.monitoring)}>
 						monitoring
 					</a>
-					<i className='fa-solid fa-ellipsis'></i>
-				</div> */}
+					<div className='container'>
+						<i className='fa-solid fa-ellipsis'></i>
+						<div className='popup'>
+							<a href='#top' onClick={() => changeContent(CONTENT.promotions)}>
+								promocje
+							</a>
+							<a href='#top' onClick={() => changeContent(CONTENT.order)}>
+								zamów usługę
+							</a>
+							<a href='#top' onClick={() => changeContent(CONTENT.aboutus)}>
+								o nas
+							</a>
+							<a href='#top' onClick={() => changeContent(CONTENT.contact)}>
+								kontakt
+							</a>
+						</div>
+					</div>
+				</div>
 			</nav>
 
 			<a href='#top' className={`back ${isNavScrolled ? "active" : null}`}>

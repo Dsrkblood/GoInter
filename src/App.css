@@ -82,7 +82,7 @@ nav {
 
 nav.active {
 	background-color: var(--background-color);
-	box-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
+	box-shadow: 0.5rem 0 1rem rgba(0, 0, 0, 0.3);
 }
 
 nav > p {
@@ -136,11 +136,11 @@ nav .mobile .icon .bar::before {
 }
 
 nav .mobile .icon.active .bar::before {
-	transform: translateY(1rem) rotate(-810deg);
+	transform: translateY(1rem) rotate(-90deg);
 }
 
 nav .mobile .icon.active .bar {
-	transform: rotate(225deg);
+	transform: rotate(45deg);
 }
 
 nav .mobile .icon.active .bar::after {
@@ -149,21 +149,21 @@ nav .mobile .icon.active .bar::after {
 
 nav .sidebar {
 	position: absolute;
-	top: 0;
+	top: 54px;
 	right: -100vw;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	width: 250px;
-	height: 80vh;
+	height: 550px;
 	background-color: var(--background-color);
-	/* background-color: red; */
 	border-radius: 0 0 0 15rem;
-	box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+	/* box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1); */
+	box-shadow: 0.5rem 0.8rem 1rem rgba(0, 0, 0, 0.3);
 	opacity: 0;
 	transition: right 0.3s ease-in, opacity 0.3s ease-in;
-	z-index: -1;
+	z-index: -10;
 }
 
 nav .sidebar.active {
@@ -182,6 +182,61 @@ nav .sidebar > a {
 }
 
 nav .sidebar > a:hover {
+	color: var(--text-info-primary);
+}
+
+nav .desktop {
+	position: relative;
+	display: none;
+	align-items: center;
+	text-transform: uppercase;
+	margin-right: 6rem;
+}
+
+nav .desktop a,
+nav .desktop i {
+	font-size: 1.4rem;
+	margin-inline: 1rem;
+	padding: 1rem 1rem;
+	color: var(--primary-color);
+	text-decoration: none;
+	transition: color 0.3s ease-in;
+	letter-spacing: 0.3rem;
+	cursor: pointer;
+}
+
+nav .desktop .container:hover > .popup {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+nav .desktop .popup {
+	padding: 2rem 1rem;
+	position: absolute;
+	right: -7rem;
+	top: 5rem;
+	display: none;
+	background-color: var(--background-color);
+	border-radius: 1rem;
+	text-align: center;
+}
+
+nav .desktop .popup a {
+	color: var(--secondary-color);
+}
+
+nav .desktop .popup a:hover {
+	color: var(--text-info-primary);
+}
+
+nav.active .desktop a,
+nav.active .desktop i {
+	color: var(--secondary-color);
+}
+nav.active .desktop a:hover,
+nav.active .desktop i:hover {
 	color: var(--text-info-primary);
 }
 
@@ -914,21 +969,6 @@ footer .bottom p a:hover {
 }
 
 @media screen and (min-width: 768px) {
-	header {
-		justify-content: space-between;
-	}
-	header .contact ul li {
-		text-align: left;
-		display: block;
-	}
-	header .help {
-		display: flex;
-		align-items: center;
-	}
-	header .help ul li {
-		display: inline;
-		margin-left: 4rem;
-	}
 	#particles {
 		height: 45rem;
 	}
@@ -989,21 +1029,11 @@ footer .bottom p a:hover {
 	}
 }
 @media screen and (min-width: 992px) {
-	header {
-		padding: 2rem 5rem;
-	}
-	header .contact ul li {
-		display: inline;
-	}
-	#nav {
-		padding: 0 5rem;
-	}
-	#nav .mobile {
+	nav .mobile {
 		display: none;
 	}
-	#nav .desktop {
-		padding: 3rem 0;
-		display: block;
+	nav .desktop{
+		display: flex;
 	}
 	#particles {
 		height: 70rem;
