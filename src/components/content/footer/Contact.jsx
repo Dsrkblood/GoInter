@@ -1,6 +1,9 @@
+/* eslint-disable react/prop-types */
 import ContactList from "./ContactList";
+import { CONTENT } from "../../../data";
 
-export default function Contact() {
+export default function Contact({ changeContent }) {
+	console.log(CONTENT.internet);
 	return (
 		<div className='container'>
 			<div className='info-box about'>
@@ -19,26 +22,26 @@ export default function Contact() {
 				title='oferta'
 				data={{
 					list: [
-						"Internet Światłowodowy",
-						"Internet Radiowy",
-						"Internet dla biznesu",
-						"Telewizja",
-						"Monitoring",
+						["Internet dla każdego", CONTENT.internet],
+						["Telefon", CONTENT.phone],
+						["Telewizja", CONTENT.tv],
+						["Monitoring", CONTENT.monitoring],
 					],
 				}}
+				changeContent={changeContent}
 			/>
 			<ContactList
 				classes='info-box important'
 				title='ważne'
 				data={{
 					list: [
-						"O nas",
-						"Kontakt",
-						"Promocje",
-						"Zamów usługę",
-						"Dokumenty do pobrania",
+						["O nas", CONTENT.aboutus],
+						["Kontakt", CONTENT.contact],
+						["Promocje", CONTENT.promotions],
+						["Zamów usługę", CONTENT.order],
 					],
 				}}
+				changeContent={changeContent}
 			/>
 
 			<div className='info-box contact'>

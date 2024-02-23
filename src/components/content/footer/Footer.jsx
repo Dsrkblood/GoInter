@@ -1,11 +1,12 @@
+/* eslint-disable react/prop-types */
 import Contact from "./Contact";
 
-export default function Footer() {
+export default function Footer({ changeContent }) {
 	const year = new Date().getFullYear();
 	return (
 		<footer>
 			<div className='top'>
-				<Contact />
+				<Contact changeContent={changeContent} />
 			</div>
 			<div className='bottom'>
 				<p>GoInter &copy; {year}</p>

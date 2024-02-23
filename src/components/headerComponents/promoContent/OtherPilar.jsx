@@ -4,7 +4,7 @@ export default function OtherPilar({ content, changeContent }) {
 	return (
 		<>
 			<div className='top-section'>
-				<div className='section-description'>
+				<div className='section-description' key={content.header.title}>
 					<h1 className='active'>{content.header.title}</h1>
 				</div>
 			</div>

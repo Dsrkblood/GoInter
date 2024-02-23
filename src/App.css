@@ -371,7 +371,6 @@ nav.active .desktop i:hover {
 	justify-content: space-evenly;
 	text-align: center;
 	width: 100%;
-	animation: fadein 5s;
 	text-transform: uppercase;
 	color: var(--primary-color);
 }
@@ -382,6 +381,7 @@ nav.active .desktop i:hover {
 	line-height: 1;
 	letter-spacing: 0.3rem;
 	word-wrap: break-word;
+	animation: fadein 1s ease-in;
 }
 
 #header.container-section .bottom-section {
@@ -1137,19 +1137,6 @@ footer .bottom p a:hover {
 	}
 	100% {
 		opacity: 1;
-	}
-}
-
-@keyframes arrowMove {
-	0% {
-		top: 0px;
-	}
-	50% {
-		top: 5px;
-	}
-
-	100% {
-		top: 0px;
 	}
 }
 
