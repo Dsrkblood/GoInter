@@ -445,7 +445,7 @@ nav.active .desktop i:hover {
 
 #content {
 	position: relative;
-	margin-top: 10rem;
+	margin-top: 3rem;
 	text-align: center;
 	color: var(--secondary-color);
 }
@@ -587,7 +587,7 @@ nav.active .desktop i:hover {
 	position: absolute;
 	bottom: -2rem;
 	left: 50%;
-	min-width: 16rem;
+	min-width: 22rem;
 	padding: 2rem 1rem;
 	font-size: 1.4rem;
 	text-transform: uppercase;
@@ -905,9 +905,6 @@ footer .bottom p a:hover {
 	#header.container {
 		margin: 0 auto;
 	}
-	#content #bundle-division {
-		scroll-margin-top: 64px;
-	}
 	#content .content-header h3 {
 		padding-top: 3rem;
 		font-size: 2.4rem;
@@ -954,9 +951,6 @@ footer .bottom p a:hover {
 	}
 	#header.container-section .top-section .section-description h1 {
 		font-size: 4.2rem;
-	}
-	#content #bundle-division {
-		scroll-margin-top: 80px;
 	}
 	#content .slider-arrow {
 		top: -10rem;
@@ -1034,9 +1028,6 @@ footer .bottom p a:hover {
 	}
 	#header.container-section .top-section .section-description h1 {
 		font-size: 7rem;
-	}
-	#content #bundle-division {
-		scroll-margin-top: 100px;
 	}
 	#bundle-division .container .offers {
 		margin: 5rem 0 6rem;
