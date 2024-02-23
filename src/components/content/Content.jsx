@@ -33,13 +33,7 @@ export default function Content({ content, changeContent }) {
 
 	return (
 		<div id='content'>
-			<div className='slider-arrow'>
-				<a href='#bundle-division'>
-					<i className='fa-solid fa-chevron-down'></i>
-					<i className='fa-solid fa-chevron-down'></i>
-					<i className='fa-solid fa-chevron-down'></i>
-				</a>
-			</div>
+			
 			<section id='bundle-division'>{createOffer}</section>
 
 			{mainContent}

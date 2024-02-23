@@ -12,6 +12,13 @@ export default function BrandPillarsVault({ content, changeContent }) {
 			) : (
 				<OtherPilar content={content} changeContent={changeContent} />
 			)}
+			<div className='arrow-bottom'>
+				<a href='#bundle-division'>
+					<i className='fa-solid fa-chevron-down'></i>
+					<i className='fa-solid fa-chevron-down'></i>
+					<i className='fa-solid fa-chevron-down'></i>
+				</a>
+			</div>
 		</div>
 	);
 }

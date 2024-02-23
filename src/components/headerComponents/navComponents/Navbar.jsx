@@ -74,7 +74,7 @@ export default function Navbar({ changeContent }) {
 				</div>
 			</nav>
 
-			<a href='#top' className={`back ${isNavScrolled ? "active" : null}`}>
+			<a href='#top' className={`arrow-top ${isNavScrolled ? "active" : null}`}>
 				<i className='fa-solid fa-chevron-up'></i>
 			</a>
 		</>
