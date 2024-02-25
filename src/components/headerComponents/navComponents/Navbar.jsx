@@ -62,8 +62,8 @@ export default function Navbar({ changeContent }) {
 					<a href='#top' onClick={() => changeContent(CONTENT.monitoring)}>
 						monitoring
 					</a>
-					<div className='container' aria-label='Rozwiń'>
-						<a href='#' onClick={handleOpenPopup}>
+					<div className='container'>
+						<a href='#' onClick={handleOpenPopup} aria-label='Rozwiń'>
 							<i className='fa-solid fa-ellipsis'></i>
 						</a>
 
