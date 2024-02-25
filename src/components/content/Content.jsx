@@ -17,7 +17,7 @@ export default function Content({ content, changeContent }) {
 	} else if (content.title === "kontakt") {
 		mainContent = <Contact icon={content.icons} />;
 	} else if (content.title === "telefon") {
-		mainContent = <Phone />;
+		mainContent = <Phone data={content} />;
 	}
 
 	let createOffer = [];

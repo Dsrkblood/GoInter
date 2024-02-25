@@ -2,6 +2,13 @@ import speedImage01 from "./assets/price-icon01.png";
 import speedImage02 from "./assets/price-icon02.png";
 import speedImage03 from "./assets/price-icon03.png";
 
+import phoneIcon01 from "./assets/phone-icon01.png";
+import phoneIcon02 from "./assets/phone-icon02.png";
+import phoneIcon03 from "./assets/phone-icon03.png";
+import phoneIcon04 from "./assets/phone-icon04.png";
+import phoneIcon05 from "./assets/phone-icon05.png";
+import phoneIcon06 from "./assets/phone-icon06.png";
+
 export const CONTENT = {
 	start: {
 		title: "start",
@@ -250,8 +257,72 @@ export const CONTENT = {
 	phone: {
 		title: "telefon",
 		header: {
-			title: "telefon",
+			title: "rozmowy, SMS/MMS bez limitów",
 		},
+		icons: {
+			first: {
+				img: phoneIcon01,
+				src: "Obrazek przedstawiający osie X,Y,Z",
+				title: "Bez limitów",
+				description:
+					"Rozmowy, SMS/MMS bez limitów do wszystkich sieci komórkowych",
+			},
+			second: {
+				img: phoneIcon02,
+				src: "Obrazek przedstawiający sześciań",
+				title: "Za grosze do UE",
+				description: "Stawki połączeń do krajów UE to kilka groszy",
+			},
+			third: {
+				img: phoneIcon03,
+				src: "Obrazek przedstawiający połączone kwadraty",
+				title: "Wirtualna centrala",
+				description:
+					"Pełne wyposażenie dla twojej firmy w urządzenia do obsługi centrali",
+			},
+			fourth: {
+				img: phoneIcon04,
+				src: "Obrazek heksagonu z kwadratów",
+				title: "Wysoka jakość",
+				description: "Wysoka gwarancja jakości połączenia telefonicznego",
+			},
+			fifth: {
+				img: phoneIcon05,
+				src: "Obrazek przedstawiający warstwy",
+				title: "Bezpieczeństwo",
+				description: "Zabezpieczenie wszystkich danych wrażliwych",
+			},
+			sixth: {
+				img: phoneIcon06,
+				src: "Obrazek przedstawiający sześcian ze strzałkami",
+				title: "Kolejkowanie rozmów",
+				description: "Automatyzacja wielu połączeń przychodzących",
+			},
+		},
+		functions: [
+			[
+				"Grupy wywoławcze(hant groups)",
+				"Definiowanie grup telefonów z różnymi schematami dzwonienia",
+			],
+			[
+				"Abonencki panel nagrywania rozmów",
+				"Abonent może się zalogować na swoje konto, na którym operator udostępnia jego telefony. Może administrować nagrania, czyli je włączać, wyłączać, odsłuchiwać, kasować, przegrywać na dysk lokalny itp.",
+			],
+			[
+				"IVR",
+				"Zapowiedzi głosowe z zaawansowanymi możliwościami (menu, nagrywanie, odtwarzanie, dostęp do baz danych itp.). IVR jest konfigurowany graficznie. Dowiedź się jak właściwie zaprojektować swój IVR",
+			],
+			[
+				"Kolejkowanie rozmów",
+				"Kolejkowanie połączeń przychodzących Jest to usługa umożliwiająca automatyzację wielu połączeń telefonicznych. Odbierane w ten sposób połączenia są szeregowane i buforowanie co pozwala na sprawne przełączanie ich do właściwego odbiorcy. Natomiast dzwoniącemu zapewnia informacje o jego statusie i czasie oczekiwania na połącznie.",
+			],
+			[
+				"Call center",
+				"Z zaawansowanymi możliwościami; między innymi, IVR, kolejkowanie rozmów, logowanie agentów, zarządzanie agentami i interfejsami do zewnętrznych aplikacji call center oraz CRM.",
+			],
+			["Pokoje telekonferencyjne z obsługą poprzez panel www", ""],
+			["Integracja z aplikacjami biznesowymi (CRM)", "Poprzez interfejs API"],
+		],
 	},
 	tv: {
 		title: "telewizja",
@@ -340,9 +411,9 @@ export const CONTENT = {
 			phone: {
 				graphics: "fa-solid fa-phone",
 				row: true,
-				headerFirst: "Infolinia" ,
-				headerSecond:"Pomoc techniczna",
-				descriptionFirst: "00 000 00 00" ,
+				headerFirst: "Infolinia",
+				headerSecond: "Pomoc techniczna",
+				descriptionFirst: "00 000 00 00",
 				descriptionSecond: "000 000 000",
 			},
 			location: {
@@ -350,7 +421,7 @@ export const CONTENT = {
 				row: false,
 				headerFirst: "GoInter",
 				descriptionFirst: "ul. Warszawska 00",
-				descriptionSecond:"05-092 Łomianki"
+				descriptionSecond: "05-092 Łomianki",
 			},
 			mail: {
 				graphics: "fa-regular fa-envelope",

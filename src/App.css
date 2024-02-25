@@ -608,6 +608,78 @@ nav.active .desktop i:hover {
 	width: 100%;
 }
 
+.phone-section .container .phone-header h3 {
+	font-size: 2rem;
+	font-weight: 300;
+	text-transform: uppercase;
+}
+
+.phone-section .container .phone-header h4 {
+	font-size: 3rem;
+}
+
+.phone-section .container .phone-header p {
+	margin: 1rem auto;
+	font-size: 1.7rem;
+}
+
+.phone-section .container-icons {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 4rem;
+}
+
+.phone-section .container-icons .box {
+	margin: 1rem auto;
+	width: 80%;
+	letter-spacing: 0.1rem;
+}
+
+.phone-section .container-icons .box:last-child {
+	margin-bottom: 6rem;
+}
+
+.phone-section .container-icons .icon-styled {
+	margin: 2rem auto;
+}
+
+.phone-section .container-icons .icon-styled img {
+	width: 6rem;
+	height: 6rem;
+}
+
+.phone-section .container-icons .box .media-body h3 {
+	margin: 1rem 0;
+	font-size: 2rem;
+	font-weight: 700;
+}
+
+.phone-section .container-icons .box .media-body p {
+	font-size: 1.6rem;
+	font-weight: 300;
+}
+
+.phone-section .container-list {
+	margin: 4rem auto;
+}
+
+.phone-section .container-list li {
+	margin: 2rem auto;
+	list-style: none;
+}
+
+.phone-section .container-list .strong {
+	font-size: 1.8rem;
+	font-weight: 600;
+}
+
+.phone-section .container-list .info {
+	font-size: 1.4rem;
+	text-align: center;
+	font-weight: 300;
+}
+
 .info .container {
 	display: flex;
 	flex-direction: column;
@@ -810,14 +882,14 @@ section.contact-box a {
 }
 
 footer {
-	margin-top: 6rem;
+	margin-top: 2rem;
 }
 
 footer .top .container {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	padding: 5rem 1rem 4rem;
+	padding: 0rem 1rem 4rem;
 	width: 100%;
 }
 
