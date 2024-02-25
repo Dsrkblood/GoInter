@@ -1158,7 +1158,7 @@ footer .bottom p a:hover {
 	.offer-positions .container .header .number {
 		position: absolute;
 		top: -8rem;
-		padding: 0;
+		padding-right: 1rem;
 		font-size: 16rem;
 		z-index: -1;
 	}
@@ -1220,7 +1220,16 @@ footer .bottom p a:hover {
 	0% {
 		top: 0;
 	}
-	50% {
+	30% {
 		top: 0.5rem;
+	}
+	50% {
+		top: 0.3rem;
+	}
+	70% {
+		top: 0.5rem;
+	}
+	100% {
+		top: 0;
 	}
 }
