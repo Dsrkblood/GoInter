@@ -608,21 +608,6 @@ nav.active .desktop i:hover {
 	width: 100%;
 }
 
-.phone-section .container .phone-header h3 {
-	font-size: 2rem;
-	font-weight: 300;
-	text-transform: uppercase;
-}
-
-.phone-section .container .phone-header h4 {
-	font-size: 3rem;
-}
-
-.phone-section .container .phone-header p {
-	margin: 1rem auto;
-	font-size: 1.7rem;
-}
-
 .phone-section .container-icons {
 	display: flex;
 	flex-direction: column;
@@ -660,21 +645,40 @@ nav.active .desktop i:hover {
 	font-weight: 300;
 }
 
-.phone-section .container-list {
+.list-section {
+	background-color: var(--primary-color);
+}
+
+.list-section .container .phone-header h3 {
+	font-size: 2rem;
+	font-weight: 300;
+	text-transform: uppercase;
+}
+
+.list-section .container .phone-header h4 {
+	font-size: 3rem;
+}
+
+.list-section .container .phone-header p {
+	margin: 1rem auto;
+	font-size: 1.7rem;
+}
+
+.list-section .container-list {
 	margin: 4rem auto;
 }
 
-.phone-section .container-list li {
+.list-section .container-list li {
 	margin: 2rem auto;
 	list-style: none;
 }
 
-.phone-section .container-list .strong {
+.list-section .container-list .strong {
 	font-size: 1.8rem;
 	font-weight: 600;
 }
 
-.phone-section .container-list .info {
+.list-section .container-list .info {
 	font-size: 1.4rem;
 	text-align: center;
 	font-weight: 300;
@@ -1038,6 +1042,13 @@ footer .bottom p a:hover {
 	section.contact-box .header {
 		font-size: 2.4rem;
 	}
+	.phone-section .container-icons {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	.phone-section .container-icons .box {
+		width: 50%;
+	}
 	footer .top .container {
 		flex-direction: row;
 		width: 100%;
@@ -1175,6 +1186,9 @@ footer .bottom p a:hover {
 	.offer-positions .container .description {
 		font-size: 2rem;
 		letter-spacing: 0.2rem;
+	}
+	.phone-section .container-icons .box {
+		width: 30%;
 	}
 	footer .top .container {
 		flex-direction: row;
