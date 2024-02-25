@@ -196,12 +196,17 @@ nav .desktop a,
 nav .desktop i {
 	font-size: 1.4rem;
 	margin-inline: 1rem;
-	padding: 1rem 1rem;
+	padding: 1.5rem 1rem;
 	color: var(--primary-color);
 	text-decoration: none;
 	transition: color 0.3s ease-in;
 	letter-spacing: 0.3rem;
 	cursor: pointer;
+}
+
+nav .desktop .container {
+	align-items: center;
+	line-height: 0.5rem;
 }
 
 nav .desktop .container:hover > .popup {
@@ -218,6 +223,11 @@ nav .desktop .popup {
 	background-color: var(--background-color);
 	border-radius: 1rem;
 	text-align: center;
+}
+
+nav .desktop .popup.open {
+	display: flex;
+	flex-direction: column;
 }
 
 nav .desktop .popup a {
