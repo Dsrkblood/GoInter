@@ -5,12 +5,12 @@ export default function Information() {
 		<section className='section-bg info'>
 			<div className='container'>
 				<div className='box content'>
-					<h5>wybierz nas</h5>
-					<h3>
-						<span className="highlighted-text">GOINTER</span> jest pewny
-					</h3>
-					<p className="italic">Wykorzystaj potęgę światłowodu!</p>
-					<p className="description">
+					<h3>wybierz nas</h3>
+					<h4>
+						<span className='highlighted-text'>GOINTER</span> jest pewny
+					</h4>
+					<p className='italic'>Wykorzystaj potęgę światłowodu!</p>
+					<p className='description'>
 						Szybki, sprawdzony i tani światłowód w firmie{" "}
 						<span className='highlighted-text'>GOINTER</span>, to pewny dostęp
 						do Internetu, telewizji oraz telefonii w naszym regionie. Możlowiści

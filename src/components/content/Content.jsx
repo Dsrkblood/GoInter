@@ -3,6 +3,7 @@ import BundleDivision from "./sections/BundleDivision";
 import Contact from "./sections/contact/Contact";
 import Information from "./sections/Information";
 import OfferPositions from "./sections/OfferPositions";
+import Phone from "./sections/phone/Phone";
 
 export default function Content({ content, changeContent }) {
 	let mainContent;
@@ -15,6 +16,8 @@ export default function Content({ content, changeContent }) {
 		);
 	} else if (content.title === "kontakt") {
 		mainContent = <Contact icon={content.icons} />;
+	} else if (content.title === "telefon") {
+		mainContent = <Phone />;
 	}
 
 	let createOffer = [];
@@ -33,8 +36,9 @@ export default function Content({ content, changeContent }) {
 
 	return (
 		<div id='content'>
-			
-			<section id='bundle-division'>{createOffer}</section>
+			{createOffer.length !== 0 && (
+				<section id='bundle-division'>{createOffer}</section>
+			)}
 
 			{mainContent}
 		</div>

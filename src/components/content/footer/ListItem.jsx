@@ -2,7 +2,7 @@
 export default function ContactList({ classes, title, data, changeContent }) {
 	return (
 		<div className={classes}>
-			<h4>{title}</h4>
+			<h5>{title}</h5>
 			<ul>
 				{data.list.map(el => (
 					<li key={el[0]}>

@@ -63,7 +63,6 @@ body {
 	font-family: "Poppins", sans-serif;
 	background-color: var(--background-color);
 	overflow-x: hidden;
-	height: 200vh;
 }
 
 nav {
@@ -458,7 +457,7 @@ nav.active .desktop i:hover {
 	scroll-margin-top: 8rem;
 }
 
-#bundle-division .container .content-header h3 {
+#bundle-division .container .content-header p.title {
 	font-weight: 300;
 	font-size: 1.8rem;
 	text-transform: uppercase;
@@ -617,20 +616,20 @@ nav.active .desktop i:hover {
 	color: var(--primary-color);
 }
 
-.info .container .content h5 {
+.info .container .content h3 {
 	font-size: 2.4rem;
 	font-weight: 200;
 	text-transform: uppercase;
 	letter-spacing: 0.3rem;
 }
 
-.info .container .content h3 {
+.info .container .content h4 {
 	font-weight: 500;
 	font-size: 3.6rem;
 	line-height: 1.1;
 	margin-bottom: 2rem;
 }
-.info .container .content h3 span {
+.info .container .content h4 span {
 	font-size: 4rem;
 	letter-spacing: -0.2rem;
 }
@@ -830,13 +829,13 @@ footer .top .container .info-box {
 	color: var(--secondary-color);
 }
 
-footer .top .container .info-box h4 {
+footer .top .container .info-box h5 {
 	margin-bottom: 2rem;
 	font-size: 3rem;
 	text-transform: uppercase;
 	letter-spacing: 0.5rem;
 }
-footer .top .container .info-box h4 span {
+footer .top .container .info-box h5 span {
 	letter-spacing: -0.2rem;
 }
 
@@ -905,7 +904,7 @@ footer .bottom p a:hover {
 	#header.container {
 		margin: 0 auto;
 	}
-	#content .content-header h3 {
+	#content .content-header p.title {
 		padding-top: 3rem;
 		font-size: 2.4rem;
 	}
@@ -1055,7 +1054,7 @@ footer .bottom p a:hover {
 		text-align: left;
 		order: 2;
 	}
-	.info .container .content h3 {
+	.info .container .content h4 {
 		margin-bottom: 4rem;
 	}
 	.info .container .content .btn {
