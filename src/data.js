@@ -383,6 +383,20 @@ export const CONTENT = {
 		header: {
 			title: "monitoring ip - oferta w gointer",
 		},
+		icons: {
+			first: {
+				icon: "fa-solid fa-video",
+				title: "BEZPIECZEŃSTWO TWOJEGO DOMU I BIZNESU",
+			},
+			second: {
+				icon: "fa-regular fa-address-card",
+				title: "WYGODNY DOSTĘP I MOŻLIWOŚĆ PODGLĄDU",
+			},
+			third: {
+				icon: "fa-solid fa-bolt",
+				title: "OSZCZĘDNOŚĆ, NISKI POBÓR ENERGII",
+			},
+		},
 	},
 	promotions: {
 		title: "promocje",

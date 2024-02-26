@@ -481,8 +481,41 @@ nav.active .desktop i:hover {
 	word-wrap: break-word;
 }
 
+.container .content-header h3 {
+	text-align: left;
+	font-size: 2.5rem;
+}
+.container .content-header h3 + .content p {
+	text-align: left;
+	margin-bottom: 2rem;
+	font-size: 1.6rem;
+	font-weight: 200;
+}
+
 #bundle-division .container .content-header p {
 	font-size: 1.4rem;
+}
+
+#bundle-division .container .content-header p.italic {
+	margin-top: 2rem;
+	font-style: italic;
+	font-size: 1.7rem;
+	font-weight: 300;
+}
+
+#bundle-division .container .content-header .content p {
+	font-weight: 200;
+	font-size: 1.6rem;
+	margin: 1rem auto;
+}
+#bundle-division .container .content-header .content ul {
+	padding: 1rem 0;
+}
+#bundle-division .container .content-header .content ul li {
+	font-size: 1.7rem;
+	font-weight: 400;
+	margin: 0.5rem auto;
+	list-style: none;
 }
 
 #bundle-division .container .offers {
@@ -616,6 +649,10 @@ nav.active .desktop i:hover {
 .section-bg {
 	background: var(--secondary-gradient);
 	width: 100%;
+}
+
+.gradient {
+	background: var(--primary-gradient);
 }
 
 .phone-section .container-icons {
@@ -850,6 +887,49 @@ nav.active .desktop i:hover {
 .offer-positions .container .description {
 	font-weight: 300;
 	font-size: 1.6rem;
+}
+
+section.gradient {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+section.gradient .box {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 2rem;
+	max-width: 40rem;
+}
+
+section.gradient .box .icon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 10rem;
+	height: 10rem;
+	background-color: rgba(255, 255, 255, 0.2);
+	border-radius: 50%;
+	margin-bottom: 2rem;
+}
+section.gradient .box .icon i {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--background-color);
+	color: var(--text-info-secondary);
+	width: 8rem;
+	height: 8rem;
+	border-radius: 50%;
+	box-shadow: 0 0 5rem rgba(0, 0, 0, 0.5);
+	font-size: 3rem;
+}
+
+section.gradient .box p {
+	color: var(--primary-color);
+	font-size: 2.4rem;
+	font-weight: 600;
+	line-height: 1;
 }
 
 section.contact-box {
@@ -1199,6 +1279,24 @@ footer .bottom p a:hover {
 	}
 	.phone-section .container-icons .box {
 		width: 30%;
+	}
+	.monitoring-section .container {
+		display: flex;
+		text-align: left;
+	}
+	.monitoring-section .container .content-header,
+	.monitoring-section .container .content-img {
+		width: 50%;
+	}
+
+	.monitoring-section .container .content-header {
+		order: 1;
+	}
+	section.gradient {
+		flex-direction: row;
+	}
+	section.gradient .box {
+		padding-block: 4rem;
 	}
 	footer .top .container {
 		flex-direction: row;

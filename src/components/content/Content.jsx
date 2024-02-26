@@ -2,6 +2,7 @@
 import BundleDivision from "./sections/BundleDivision";
 import Contact from "./sections/contact/Contact";
 import Information from "./sections/Information";
+import Monitoring from "./sections/monitoring/Monitoring";
 import OfferPositions from "./sections/OfferPositions";
 import Phone from "./sections/phone/Phone";
 
@@ -18,6 +19,8 @@ export default function Content({ content, changeContent }) {
 		mainContent = <Contact icon={content.icons} />;
 	} else if (content.title === "telefon") {
 		mainContent = <Phone data={content} />;
+	} else if (content.title === "monitoring") {
+		mainContent = <Monitoring data={content} />;
 	}
 
 	let createOffer = [];
