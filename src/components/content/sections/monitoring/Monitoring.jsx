@@ -9,7 +9,7 @@ export default function Monitoring({ data }) {
 
 	return (
 		<>
-			<section id='bundle-division' className='monitoring-section'>
+			<section id='top-section' className='monitoring-section'>
 				<div className='container'>
 					<div className='content-header'>
 						<p className='title'>POSTAW NA BEZPIECZEŃSTWO</p>

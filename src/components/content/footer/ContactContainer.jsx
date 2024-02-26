@@ -34,10 +34,10 @@ export default function Contact({ changeContent }) {
 				title='ważne'
 				data={{
 					list: [
-						["O nas", CONTENT.aboutus],
+						// ["O nas", CONTENT.aboutus],
 						["Kontakt", CONTENT.contact],
 						["Promocje", CONTENT.promotions],
-						["Zamów usługę", CONTENT.order],
+						// ["Zamów usługę", CONTENT.order],
 					],
 				}}
 				changeContent={changeContent}

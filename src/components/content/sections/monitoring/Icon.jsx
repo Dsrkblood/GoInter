@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 export default function Icon({ data }) {
 	return (
 		<div className='box'>

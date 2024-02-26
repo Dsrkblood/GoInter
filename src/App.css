@@ -463,68 +463,68 @@ nav.active .desktop i:hover {
 	padding: 3rem;
 }
 
-#bundle-division {
+#top-section {
 	scroll-margin-top: 8rem;
 }
 
-#bundle-division .container .content-header p.title {
+section .container .content-header p.title {
 	font-weight: 300;
 	font-size: 1.8rem;
 	text-transform: uppercase;
 	letter-spacing: 0.3rem;
 }
 
-#bundle-division .container .content-header h2 {
+section .container .content-header h2 {
 	text-transform: uppercase;
 	font-size: 3.2rem;
 	letter-spacing: 0.15rem;
 	word-wrap: break-word;
 }
 
-.container .content-header h3 {
+section .container .content-header h3 {
 	text-align: left;
 	font-size: 2.5rem;
 }
-.container .content-header h3 + .content p {
+section .container .content-header h3 + .content p {
 	text-align: left;
 	margin-bottom: 2rem;
 	font-size: 1.6rem;
 	font-weight: 200;
 }
 
-#bundle-division .container .content-header p {
+section .container .content-header p {
 	font-size: 1.4rem;
 }
 
-#bundle-division .container .content-header p.italic {
+section .container .content-header p.italic {
 	margin-top: 2rem;
 	font-style: italic;
 	font-size: 1.7rem;
 	font-weight: 300;
 }
 
-#bundle-division .container .content-header .content p {
+section .container .content-header .content p {
 	font-weight: 200;
 	font-size: 1.6rem;
 	margin: 1rem auto;
 }
-#bundle-division .container .content-header .content ul {
+section .container .content-header .content ul {
 	padding: 1rem 0;
 }
-#bundle-division .container .content-header .content ul li {
+section .container .content-header .content ul li {
 	font-size: 1.7rem;
 	font-weight: 400;
 	margin: 0.5rem auto;
 	list-style: none;
 }
 
-#bundle-division .container .offers {
+section .container .offers {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	margin-bottom: 1rem;
 }
-#bundle-division .container .offers .card-box {
+section .container .offers .card-box {
 	margin: 4rem auto;
 	position: relative;
 	min-width: 30rem;
@@ -536,21 +536,21 @@ nav.active .desktop i:hover {
 	background-color: #fff;
 }
 
-#bundle-division .container .offers .card-box .header,
-#bundle-division .container .offers .card-box a {
+section .container .offers .card-box .header,
+section .container .offers .card-box a {
 	border-radius: 1rem 1rem 0 0;
 	background: var(--gradient-one);
 }
-#bundle-division .container .offers .card-box:nth-child(2) .header,
-#bundle-division .container .offers .card-box:nth-child(2) a {
+section .container .offers .card-box:nth-child(2) .header,
+section .container .offers .card-box:nth-child(2) a {
 	background: var(--gradient-two);
 }
-#bundle-division .container .offers .card-box:nth-child(3) .header,
-#bundle-division .container .offers .card-box:nth-child(3) a {
+section .container .offers .card-box:nth-child(3) .header,
+section .container .offers .card-box:nth-child(3) a {
 	background: var(--gradient-three);
 }
 
-#bundle-division .container .offers .card-box .header h3 {
+section .container .offers .card-box .header h3 {
 	display: flex;
 	flex-direction: column;
 	padding: 1rem 3rem;
@@ -560,7 +560,7 @@ nav.active .desktop i:hover {
 	color: var(--primary-color);
 }
 
-#bundle-division .container .offers .card-box .performance {
+section .container .offers .card-box .performance {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -568,64 +568,64 @@ nav.active .desktop i:hover {
 	font-size: 2.4rem;
 	font-weight: 300;
 }
-#bundle-division .container .offers .card-box .performance .units {
+section .container .offers .card-box .performance .units {
 	font-size: 1.2rem;
 	font-weight: 600;
 	text-transform: uppercase;
 	color: var(--secondary-color);
 }
-#bundle-division .container .offers .card-box .performance .download {
+section .container .offers .card-box .performance .download {
 	color: var(--text-info-primary);
 }
-#bundle-division .container .offers .card-box .performance .upload {
+section .container .offers .card-box .performance .upload {
 	color: var(--text-info-secondary);
 }
-#bundle-division .container .offers .card-box .performance .performance-icon {
+section .container .offers .card-box .performance .performance-icon {
 	margin-left: 2rem;
 	width: 14rem;
 	height: 14rem;
 }
-#bundle-division .container .offers .card-box .plan-features ul {
+section .container .offers .card-box .plan-features ul {
 	margin: 0 auto;
 	width: 80%;
 	color: var(--secondary-color);
 }
 
-#bundle-division .container .offers .card-box .plan-features ul li {
+section .container .offers .card-box .plan-features ul li {
 	padding: 1.4rem 0;
 	font-size: 1.6rem;
 	font-weight: 300;
 	list-style: none;
 	border-top: 0.2rem solid rgba(0, 0, 0, 0.15);
 }
-#bundle-division .container .offers .card-box .plan-features ul li.highlighted {
+section .container .offers .card-box .plan-features ul li.highlighted {
 	margin-top: 3rem;
 	font-weight: 700;
 	color: var(--secondary-color);
 }
 
-#bundle-division .container .offers .card-box .plan-features ul li:last-child {
+section .container .offers .card-box .plan-features ul li:last-child {
 	border-bottom: 0.2rem solid rgba(0, 0, 0, 0.15);
 }
-#bundle-division .container .offers .card-box .plan-price {
+section .container .offers .card-box .plan-price {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	margin: 2rem auto 4rem;
 }
 
-#bundle-division .container .offers .card-box .plan-price .small {
+section .container .offers .card-box .plan-price .small {
 	font-size: 1.2rem;
 	color: var(--secondary-color);
 	text-transform: uppercase;
 	letter-spacing: 0.2rem;
 }
-#bundle-division .container .offers .card-box .plan-price .big {
+section .container .offers .card-box .plan-price .big {
 	margin: 0 1rem;
 	font-size: 4rem;
 }
 
-#bundle-division .container .offers .card-box a {
+section .container .offers .card-box a {
 	position: absolute;
 	bottom: -2rem;
 	left: 50%;
@@ -642,7 +642,7 @@ nav.active .desktop i:hover {
 	transition: color 0.3s ease-in-out;
 }
 
-#bundle-division .container .offers .card-box a:hover {
+section .container .offers .card-box a:hover {
 	color: var(--secondary-color);
 }
 
@@ -975,6 +975,23 @@ section.contact-box a {
 	color: var(--secondary-color);
 }
 
+.promotion .container .content-header {
+	text-align: left;
+	margin-block: 4rem;
+}
+
+.promotion .container .content-header h2 {
+	font-size: 3rem;
+}
+
+.promotion .container .content-header p {
+	font-size: 1.6rem;
+	font-weight: 300;
+}
+.promotion .container .content-header p span {
+	font-weight: 600;
+}
+
 footer {
 	margin-top: 2rem;
 }
@@ -1201,17 +1218,17 @@ footer .bottom p a:hover {
 	#header.container-section .top-section .section-description h1 {
 		font-size: 7rem;
 	}
-	#bundle-division .container .offers {
+	section .container .offers {
 		margin: 5rem 0 6rem;
 		padding: 0 2%;
 		flex-direction: row;
 		justify-content: space-around;
 	}
-	#bundle-division .container .offers .card-box:hover {
+	section .container .offers .card-box:hover {
 		z-index: 1;
 		scale: 1.15;
 	}
-	#bundle-division .container .offers .card-box {
+	section .container .offers .card-box {
 		margin: 0 2rem;
 	}
 	.info .container {

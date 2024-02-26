@@ -13,7 +13,7 @@ export default function BrandPillarsVault({ content, changeContent }) {
 				<OtherPilar content={content} changeContent={changeContent} />
 			)}
 			<div className='arrow-bottom'>
-				<a href='#bundle-division' aria-label='Strzałka w dół'>
+				<a href='#top-section' aria-label='Strzałka w dół'>
 					<i className='fa-solid fa-chevron-down'></i>
 					<i className='fa-solid fa-chevron-down'></i>
 					<i className='fa-solid fa-chevron-down'></i>

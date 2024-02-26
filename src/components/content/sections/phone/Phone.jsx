@@ -16,7 +16,7 @@ export default function Phone({ data }) {
 
 	return (
 		<>
-			<section id='bundle-division' className='phone-section'>
+			<section id='top-section' className='phone-section'>
 				<div className='container'>
 					<div className='content-header'>
 						<p className='title'>idealny</p>

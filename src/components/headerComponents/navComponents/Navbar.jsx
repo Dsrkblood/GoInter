@@ -75,20 +75,20 @@ export default function Navbar({ changeContent }) {
 								}}>
 								promocje
 							</a>
-							<a
+							{/* <a
 								href='#top'
 								onClick={() => {
 									changeContent(CONTENT.order), handleClosePopup(false);
 								}}>
 								zamów usługę
-							</a>
-							<a
+							</a> */}
+							{/* <a
 								href='#top'
 								onClick={() => {
 									changeContent(CONTENT.aboutus), handleClosePopup(false);
 								}}>
 								o nas
-							</a>
+							</a> */}
 							<a
 								href='#top'
 								onClick={() => {

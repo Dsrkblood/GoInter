@@ -9,8 +9,10 @@ export default function Contact({ icon }) {
 	}
 
 	return (
-		<div id='contact' className='container'>
-			{content}
-		</div>
+		<section id='top-section'>
+			<div id='contact' className='container'>
+				{content}
+			</div>
+		</section>
 	);
 }

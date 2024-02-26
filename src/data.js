@@ -404,18 +404,18 @@ export const CONTENT = {
 			title: "promocje i ważne informacje",
 		},
 	},
-	order: {
-		title: "zamów usługę",
-		header: {
-			title: "zamów usługę",
-		},
-	},
-	aboutus: {
-		title: "o nas",
-		header: {
-			title: "o nas",
-		},
-	},
+	// order: {
+	// 	title: "zamów usługę",
+	// 	header: {
+	// 		title: "zamów usługę",
+	// 	},
+	// },
+	// aboutus: {
+	// 	title: "o nas",
+	// 	header: {
+	// 		title: "o nas",
+	// 	},
+	// },
 	contact: {
 		title: "kontakt",
 		header: {

@@ -5,6 +5,7 @@ import Information from "./sections/Information";
 import Monitoring from "./sections/monitoring/Monitoring";
 import OfferPositions from "./sections/OfferPositions";
 import Phone from "./sections/phone/Phone";
+import Promotion from "./sections/promotions/Promotion";
 
 export default function Content({ content, changeContent }) {
 	let mainContent;
@@ -21,6 +22,8 @@ export default function Content({ content, changeContent }) {
 		mainContent = <Phone data={content} />;
 	} else if (content.title === "monitoring") {
 		mainContent = <Monitoring data={content} />;
+	} else if (content.title === "promocje") {
+		mainContent = <Promotion />;
 	}
 
 	let createOffer = [];
@@ -40,7 +43,9 @@ export default function Content({ content, changeContent }) {
 	return (
 		<div id='content'>
 			{createOffer.length !== 0 && (
-				<section id='bundle-division'>{createOffer}</section>
+				<section id='top-section' className='bundle-division'>
+					{createOffer}
+				</section>
 			)}
 
 			{mainContent}
